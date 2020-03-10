@@ -9,7 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "4.16.2",
+    "express": "^4.16.2",
     "instagram": "^0.0.4",
     "node-instagram": "^4.3.0",
     "node-wikipedia": "^0.0.2",
