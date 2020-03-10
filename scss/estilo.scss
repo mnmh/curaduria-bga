@@ -23,9 +23,8 @@ nav {
 }
 
 .hero {
-    border: red 2px solid;
-    margin-top: -110px;
-    height: 99vh;
+    //border: red 2px solid;
+    height: 90vh;
     width: 100%;
     color: $primario;
 
@@ -37,6 +36,7 @@ nav {
 
     .titulos, object {
         position: absolute;
+        mix-blend-mode: difference;
     }
 
     h1 {
@@ -46,6 +46,15 @@ nav {
 
     h2 {
         font-size: 40px;
+    }
+
+    object {
+        height: 90vh;
+        width: auto;
+
+        .path {
+            stroke-dasharray: 20;
+        }
     }
 }
 

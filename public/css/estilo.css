@@ -14,9 +14,7 @@ nav {
     color: #24212D; }
 
 .hero {
-  border: red 2px solid;
-  margin-top: -110px;
-  height: 99vh;
+  height: 90vh;
   width: 100%;
   color: #DB2A6B;
   display: flex;
@@ -25,12 +23,18 @@ nav {
   flex-direction: column;
   text-align: center; }
   .hero .titulos, .hero object {
-    position: absolute; }
+    position: absolute;
+    mix-blend-mode: difference; }
   .hero h1 {
     font-size: 160px;
     margin: 10px; }
   .hero h2 {
     font-size: 40px; }
+  .hero object {
+    height: 90vh;
+    width: auto; }
+    .hero object .path {
+      stroke-dasharray: 20; }
 
 @font-face {
   font-family: "Grotesk";
