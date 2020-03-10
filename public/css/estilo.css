@@ -40,13 +40,13 @@ nav {
   .hero h2 {
     font-size: 40px; }
   .hero svg {
-    height: 90vh;
+    height: 100%;
     width: auto; }
     .hero svg path {
       stroke-dasharray: 9617.4462890625;
-      animation: bga 4s linear normal; }
+      animation: retrato 4s linear normal; }
 
-@keyframes bga {
+@keyframes retrato {
   from {
     stroke-dashoffset: 9617.5; }
   to {
@@ -69,6 +69,51 @@ nav {
       margin-left: auto; }
     .menu a:nth-child(5n) {
       margin-right: auto; }
+    .menu a:hover .delicias {
+      stroke-dasharray: 4550;
+      animation: delicias 8s linear alternate-reverse infinite; }
+    .menu a:hover .presidente {
+      stroke-dasharray: 4395;
+      animation: presidente 8s linear alternate-reverse infinite; }
+    .menu a:hover .auras {
+      stroke-dasharray: 2585;
+      animation: auras 8s linear alternate-reverse infinite; }
+    .menu a:hover .tumulo {
+      stroke-dasharray: 4918;
+      animation: auras 8s linear alternate-reverse infinite; }
+    .menu a:hover .ensayo {
+      stroke-dasharray: 4731;
+      animation: auras 8s linear alternate-reverse infinite; }
+
+@keyframes delicias {
+  from {
+    stroke-dashoffset: 0; }
+  to {
+    stroke-dashoffset: 18166; } }
+
+@keyframes presidente {
+  from {
+    stroke-dashoffset: 0; }
+  to {
+    stroke-dashoffset: 17580; } }
+
+@keyframes auras {
+  from {
+    stroke-dashoffset: 0; }
+  to {
+    stroke-dashoffset: 10340; } }
+
+@keyframes tumulo {
+  from {
+    stroke-dashoffset: 0; }
+  to {
+    stroke-dashoffset: 19670; } }
+
+@keyframes ensayo {
+  from {
+    stroke-dashoffset: 0; }
+  to {
+    stroke-dashoffset: 18922; } }
 
 @font-face {
   font-family: "Grotesk";
