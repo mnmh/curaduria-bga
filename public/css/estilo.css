@@ -1,8 +1,18 @@
 body {
   font-family: Grotesk, sans-serif; }
 
-h1, h2 {
+h1, h2, h3 {
   font-weight: normal; }
+
+h3 {
+  font-size: 24px; }
+
+svg {
+  stroke: #24212D;
+  stroke-width: 2px; }
+
+a {
+  text-decoration: underline; }
 
 nav {
   font-size: 24px;
@@ -10,7 +20,6 @@ nav {
   justify-content: space-between;
   padding: 40px; }
   nav a {
-    text-decoration: underline;
     color: #24212D; }
 
 .hero {
@@ -22,7 +31,7 @@ nav {
   align-items: center;
   flex-direction: column;
   text-align: center; }
-  .hero .titulos, .hero object {
+  .hero .titulos, .hero svg {
     position: absolute;
     mix-blend-mode: difference; }
   .hero h1 {
@@ -30,11 +39,36 @@ nav {
     margin: 10px; }
   .hero h2 {
     font-size: 40px; }
-  .hero object {
+  .hero svg {
     height: 90vh;
     width: auto; }
-    .hero object .path {
-      stroke-dasharray: 20; }
+    .hero svg path {
+      stroke-dasharray: 9617.4462890625;
+      animation: bga 4s linear normal; }
+
+@keyframes bga {
+  from {
+    stroke-dashoffset: 9617.5; }
+  to {
+    stroke-dashoffset: 19235; } }
+
+.menu {
+  max-width: 1600px;
+  margin: 15vh auto;
+  display: flex;
+  flex-wrap: wrap; }
+  .menu a {
+    display: inline-block;
+    width: 28%;
+    color: #DB2A6B;
+    text-align: center;
+    padding: 40px; }
+    .menu a svg {
+      stroke-width: 4px; }
+    .menu a:nth-child(4n) {
+      margin-left: auto; }
+    .menu a:nth-child(5n) {
+      margin-right: auto; }
 
 @font-face {
   font-family: "Grotesk";

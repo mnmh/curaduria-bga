@@ -6,8 +6,21 @@ body {
     font-family: Grotesk, sans-serif;
 }
 
-h1,h2 {
+h1,h2,h3 {
     font-weight: normal;
+}
+
+h3 {
+    font-size: 24px;
+}
+
+svg {
+    stroke: $secundario;
+    stroke-width: 2px;
+}
+
+a {
+    text-decoration: underline;
 }
 
 nav {
@@ -17,7 +30,6 @@ nav {
     padding: 40px;
 
     a {
-        text-decoration: underline;
         color: $secundario;
     }
 }
@@ -34,7 +46,7 @@ nav {
     flex-direction: column;
     text-align: center;
 
-    .titulos, object {
+    .titulos, svg {
         position: absolute;
         mix-blend-mode: difference;
     }
@@ -48,12 +60,50 @@ nav {
         font-size: 40px;
     }
 
-    object {
+    svg {
         height: 90vh;
         width: auto;
 
-        .path {
-            stroke-dasharray: 20;
+        path {
+            stroke-dasharray: 9617.4462890625;
+            animation: bga 4s linear normal;
+        }
+    }
+}
+
+@keyframes bga {
+    from {
+        stroke-dashoffset: 9617.5;
+      }
+    to {
+        stroke-dashoffset: 19235;
+      }
+}
+
+.menu {
+    max-width: 1600px;
+    margin: 15vh auto;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    a {
+        display: inline-block;
+        width: 28%;
+        color: $primario;
+        text-align: center;
+        padding: 40px;
+        
+        svg {
+            stroke-width: 4px;
+        }
+
+        &:nth-child(4n) {
+            margin-left: auto
+        }
+
+        &:nth-child(5n) {
+            margin-right: auto
         }
     }
 }
