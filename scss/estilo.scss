@@ -6,6 +6,10 @@ body {
     font-family: Grotesk, sans-serif;
 }
 
+h1,h2 {
+    font-weight: normal;
+}
+
 nav {
     font-size: 24px;
     display: flex;
@@ -16,8 +20,33 @@ nav {
         text-decoration: underline;
         color: $secundario;
     }
+}
 
-    
+.hero {
+    border: red 2px solid;
+    margin-top: -110px;
+    height: 99vh;
+    width: 100%;
+    color: $primario;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+
+    .titulos, object {
+        position: absolute;
+    }
+
+    h1 {
+        font-size: 160px;
+        margin: 10px;
+    }
+
+    h2 {
+        font-size: 40px;
+    }
 }
 
 @font-face {
