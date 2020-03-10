@@ -1,3 +1,26 @@
-p {
-    color:red;
+$primario: #DB2A6B; 
+$secundario: #24212D;
+$fondo: #ffffff;
+
+body {
+    font-family: Grotesk, sans-serif;
+}
+
+nav {
+    font-size: 24px;
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+
+    a {
+        text-decoration: underline;
+        color: $secundario;
+    }
+
+    
+}
+
+@font-face {
+    font-family: "Grotesk";
+    src: url("./public/fonts/grotesk.otf")format(opentype);
 }

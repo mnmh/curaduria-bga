@@ -1,3 +1,15 @@
-p {
-  color: red; 
-}
+body {
+  font-family: Grotesk, sans-serif; }
+
+nav {
+  font-size: 24px;
+  display: flex;
+  justify-content: space-between;
+  padding: 40px; }
+  nav a {
+    text-decoration: underline;
+    color: #24212D; }
+
+@font-face {
+  font-family: "Grotesk";
+  src: url("./public/fonts/grotesk.otf") format(opentype); }
