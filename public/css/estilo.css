@@ -4,12 +4,18 @@ body {
 h1, h2, h3 {
   font-weight: normal; }
 
+p {
+  font-size: 18px; }
+
 h3 {
   font-size: 24px; }
 
 svg {
   stroke: #24212D;
   stroke-width: 2px; }
+
+.btm {
+  margin-bottom: 15vh; }
 
 a {
   text-decoration: underline; }
@@ -23,9 +29,10 @@ nav {
     color: #24212D; }
 
 .hero {
-  height: 85vh;
+  height: 90vh;
   width: 100%;
   color: #DB2A6B;
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -115,10 +122,16 @@ nav {
   to {
     stroke-dashoffset: 18922; } }
 
-section.audio p {
-  font-family: inter;
-  font-weight: light;
-  color: #24212D; }
+section.audio {
+  border: 1px red solid; }
+  section.audio p {
+    font-family: inter;
+    font-weight: 100;
+    color: #24212D;
+    line-height: 1.8;
+    max-width: 1000px;
+    margin: 5vh auto;
+    text-align: center; }
 
 @font-face {
   font-family: "Grotesk";

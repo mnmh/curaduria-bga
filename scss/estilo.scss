@@ -10,6 +10,10 @@ h1,h2,h3 {
     font-weight: normal;
 }
 
+p {
+    font-size: 18px;
+}
+
 h3 {
     font-size: 24px;
 }
@@ -17,6 +21,10 @@ h3 {
 svg {
     stroke: $secundario;
     stroke-width: 2px;
+}
+
+.btm {
+    margin-bottom: 15vh;
 }
 
 a {
@@ -36,9 +44,10 @@ nav {
 
 .hero {
     //border: red 2px solid;
-    height: 85vh;
+    height: 90vh;
     width: 100%;
     color: $primario;
+    position: relative;
 
     display: flex;
     justify-content: center;
@@ -182,12 +191,17 @@ nav {
 }
 
 section.audio {
+    border: 1px red solid;
+        p {
+            font-family: inter;
+            font-weight: 100;
+            color: $secundario;
+            line-height: 1.8;
+            max-width: 1000px;
+            margin: 5vh auto;
+            text-align: center;
 
-    p {
-        font-family: inter;
-        font-weight: light;
-        color: $secundario;
-    }
+        }
 
 }
 
