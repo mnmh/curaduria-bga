@@ -23,7 +23,7 @@ nav {
     color: #24212D; }
 
 .hero {
-  height: 90vh;
+  height: 85vh;
   width: 100%;
   color: #DB2A6B;
   display: flex;
@@ -114,6 +114,11 @@ nav {
     stroke-dashoffset: 0; }
   to {
     stroke-dashoffset: 18922; } }
+
+section.audio p {
+  font-family: inter;
+  font-weight: light;
+  color: #24212D; }
 
 @font-face {
   font-family: "Grotesk";

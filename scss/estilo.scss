@@ -36,7 +36,7 @@ nav {
 
 .hero {
     //border: red 2px solid;
-    height: 90vh;
+    height: 85vh;
     width: 100%;
     color: $primario;
 
@@ -179,6 +179,16 @@ nav {
     to {
         stroke-dashoffset: 18922;
       }
+}
+
+section.audio {
+
+    p {
+        font-family: inter;
+        font-weight: light;
+        color: $secundario;
+    }
+
 }
 
 @font-face {

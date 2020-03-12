@@ -4,4 +4,7 @@
   var length = a.getTotalLength();
   console.log("length", length);
 
+
+  
+
 })(jQuery, this);
