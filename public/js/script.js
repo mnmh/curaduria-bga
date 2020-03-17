@@ -7,6 +7,7 @@
   var $path = $section.find("path");
   var audioFrom = $section.attr("audio-from");
   var audioTo = $section.attr("audio-to");
+  x.currentTime = parseFloat(audioFrom);
   
   //preparar path
   pathPrepare($path);
@@ -25,19 +26,36 @@
   var drawPath = gsap.to(
     $path, 
       { 
-      duration: audioTo,
+      duration: (audioTo - audioFrom),
       strokeDashoffset: 0, 
       ease:Linear.easeNone,
       paused:true,
-      onComplete:function(){ x.pause()}
+      onComplete: playNext
   });
+
+  //funcion para pasar a la siguiente seccion
+  function playNext() {
+    x.pause();
+    drawPath.pause();
+    $section.hide();
+
+    //update id
+    id++;
+    $section = $('#'+ id);
+    $section.show();
+    $path = $section.find("path");
+    audioFrom = $section.attr("audio-from");
+    audioTo = $section.attr("audio-to");
+    x.currentTime = audioFrom; //avanzar reproductor
+    pathPrepare($path);
+    
+  }
 	
   //funcion para Pausar / reproducir Audio
   function togglePlay() { 
     if (x.currentTime === 0 || (x.paused && x.currentTime > 0 && !x.ended)){
       x.play(); //reproducir
       drawPath.play(); //empieza anim
-
       console.log('play', 'time:', x.currentTime);
     } else {
       x.pause(); //pausar
