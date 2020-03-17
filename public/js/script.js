@@ -17,13 +17,13 @@
   //var tl = gsap.timeline();
   var drawPath = gsap.to(
     $path, 
-    15, 
+    30.3, 
       { 
       strokeDashoffset: 0, 
       ease:Linear.easeNone,
-      paused:true
-      /*onStart:function(){x.play()},
-      Complete:function(){x.pause()}*/
+      paused:true,
+      onComplete:function(){ x.pause()}
+      
 
   });
 
@@ -46,11 +46,13 @@
       $("#audio").addClass('playing').removeClass('paused');
       drawPath.play();
       console.log('play');
+      console.log('time:', x.currentTime);
     } else {
       x.pause();
       $("#audio").addClass('paused').removeClass('playing');
       drawPath.pause();
       console.log('pause');
+      console.log('time:', x.currentTime);
     }
   }
 
