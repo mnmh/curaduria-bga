@@ -190,7 +190,7 @@ nav {
       }
 }
 
-section.audio {
+section.dibujo {
     border: 1px red solid;
         p {
             font-family: inter;
@@ -198,11 +198,18 @@ section.audio {
             color: $secundario;
             line-height: 1.8;
             max-width: 1000px;
-            margin: 5vh auto;
+            margin: 5vh auto 0 auto;
             text-align: center;
 
         }
+}
 
+section.player {
+    margin: 40px;
+    button {
+        display: block;
+        margin: auto;
+    }
 }
 
 //Grotesk font

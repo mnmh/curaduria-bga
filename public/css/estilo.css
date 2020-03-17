@@ -122,16 +122,22 @@ nav {
   to {
     stroke-dashoffset: 18922; } }
 
-section.audio {
+section.dibujo {
   border: 1px red solid; }
-  section.audio p {
+  section.dibujo p {
     font-family: inter;
     font-weight: 100;
     color: #24212D;
     line-height: 1.8;
     max-width: 1000px;
-    margin: 5vh auto;
+    margin: 5vh auto 0 auto;
     text-align: center; }
+
+section.player {
+  margin: 40px; }
+  section.player button {
+    display: block;
+    margin: auto; }
 
 @font-face {
   font-family: 'Grotesk';
