@@ -2,7 +2,7 @@
 
   var a = document.getElementsByClassName("ensayo")[0]; //selecciona el tag objeto
   var length = a.getTotalLength();
-  console.log("length", length);
+  //console.log("length", length);
 
 
   

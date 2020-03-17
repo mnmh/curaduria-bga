@@ -205,7 +205,29 @@ section.audio {
 
 }
 
+//Grotesk font
 @font-face {
-    font-family: "Grotesk";
-    src: url("./public/fonts/grotesk.otf")format(opentype);
-}
+    font-family: 'Grotesk';
+    src: url('../fonts/Grotesk-Medium.eot');
+    font-weight: normal;
+    }
+    
+    @font-face {
+    font-family: 'Grotesk';
+    src:
+    url('../fonts/Grotesk-Medium.woff2') format('woff2'),
+    url('../fonts/Grotesk-Medium.woff') format('woff');
+    font-weight: normal;
+    }
+    
+    @font-face {
+    font-family: 'Grotesk';
+    src: url('../fonts/Grotesk-Medium.svg') format('svg');
+    font-weight: normal;
+    }
+    
+    @font-face {
+    font-family: 'Grotesk';
+    src: url('../fonts/Grotesk-Medium.ttf') format('truetype');
+    font-weight: normal;
+    }
