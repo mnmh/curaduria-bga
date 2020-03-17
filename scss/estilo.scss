@@ -190,31 +190,33 @@ nav {
       }
 }
 
-section.dibujo {
+section.container {
     border: 1px red solid;
-    height: 80vh;
+    height: 95vh;
     width: 100vw;
-        p {
-            font-family: inter;
-            font-weight: 100;
-            color: $secundario;
-            line-height: 1.8;
-            max-width: 1000px;
-            margin: 5vh auto 0 auto;
-            text-align: center;
-
-        }
-}
-
-section.player {
-    margin: 40px;
-    height: 10vh;
     margin-bottom: 5vh;
-    button {
-        display: block;
-        margin: auto;
+
+    p {
+        font-family: inter;
+        font-weight: 100;
+        color: $secundario;
+        line-height: 1.8;
+        max-width: 1000px;
+        margin: 5vh auto 0 auto;
+        text-align: center;
+
+    }
+    
+    .player {
+        margin: 40px;
+        button {
+            display: block;
+            margin: auto;
+        }
     }
 }
+
+    
 
 //Grotesk font
 @font-face {

@@ -122,11 +122,12 @@ nav {
   to {
     stroke-dashoffset: 18922; } }
 
-section.dibujo {
+section.container {
   border: 1px red solid;
-  height: 80vh;
-  width: 100vw; }
-  section.dibujo p {
+  height: 95vh;
+  width: 100vw;
+  margin-bottom: 5vh; }
+  section.container p {
     font-family: inter;
     font-weight: 100;
     color: #24212D;
@@ -134,14 +135,11 @@ section.dibujo {
     max-width: 1000px;
     margin: 5vh auto 0 auto;
     text-align: center; }
-
-section.player {
-  margin: 40px;
-  height: 10vh;
-  margin-bottom: 5vh; }
-  section.player button {
-    display: block;
-    margin: auto; }
+  section.container .player {
+    margin: 40px; }
+    section.container .player button {
+      display: block;
+      margin: auto; }
 
 @font-face {
   font-family: 'Grotesk';
