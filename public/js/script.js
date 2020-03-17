@@ -1,8 +1,6 @@
 (function ($, root, undefined) {
 
-  //var a = document.getElementsByClassName("ensayo")[0]; //selecciona el tag objeto
-  //var length = a.getTotalLength();
-  //console.log("length", length);
+  var x = $("#audio")[0]; 
 
   /* ---------------------------------------------
   ANIMATE SVG
@@ -16,8 +14,22 @@
   var $path = $("path#path");
   pathPrepare($path);
 
-  var tl = gsap.timeline();
-  tl.to($path, {duration: 5, strokeDashoffset: 0, ease:Linear.easeNone });
+  //var tl = gsap.timeline();
+  var drawPath = gsap.to(
+    $path, 
+    15, 
+      { 
+      strokeDashoffset: 0, 
+      ease:Linear.easeNone,
+      paused:true
+      /*onStart:function(){x.play()},
+      Complete:function(){x.pause()}*/
+
+  });
+
+  
+
+  
 
 
 	
@@ -27,16 +39,17 @@
   //$("#1").on("scroll", console.log('scroll'));
   $("#toggle-play").click(togglePlay);
 
-  var x = $("#audio")[0]; 
 
   function togglePlay() { 
     if (x.currentTime === 0 || (x.paused && x.currentTime > 0 && !x.ended)){
       x.play();
       $("#audio").addClass('playing').removeClass('paused');
+      drawPath.play();
       console.log('play');
     } else {
       x.pause();
       $("#audio").addClass('paused').removeClass('playing');
+      drawPath.pause();
       console.log('pause');
     }
   }
