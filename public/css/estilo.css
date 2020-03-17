@@ -124,7 +124,7 @@ nav {
 
 section.dibujo {
   border: 1px red solid;
-  height: 90vh;
+  height: 80vh;
   width: 100vw; }
   section.dibujo p {
     font-family: inter;
@@ -137,7 +137,8 @@ section.dibujo {
 
 section.player {
   margin: 40px;
-  height: 20vh; }
+  height: 10vh;
+  margin-bottom: 5vh; }
   section.player button {
     display: block;
     margin: auto; }

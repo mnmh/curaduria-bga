@@ -1,29 +1,27 @@
 (function ($, root, undefined) {
 
   var x = $("#audio")[0];
+
   var id = 1;
   var $section = $('#'+ id);
-
-   /* ---------------------------------------------
-  ENCONTRAR INTERVALO DE TIEMPO
-  ------------------------------------------------*/
+  var $path = $section.find("path");
   var audioFrom = $section.attr("audio-from");
   var audioTo = $section.attr("audio-to");
-  console.log ('audio desde:', audioFrom, ' hasta: ', audioTo);
+  
+  //preparar path
+  pathPrepare($path);
 
-  /* ---------------------------------------------
-  ANIMATE SVG
-  ------------------------------------------------*/
+  //pausar reproducir audio
+  $("#toggle-play").click(togglePlay);
+
+  //funcion para preparar el path
 	function pathPrepare ($p) {
-		var lineLength = $el[0].getTotalLength();
+		var lineLength = $p[0].getTotalLength();
 		$p.css("stroke-dasharray", lineLength);
 		$p.css("stroke-dashoffset", lineLength);
   }
   
-  var $path = section.find("path");
-  pathPrepare($path);
-
-  //var tl = gsap.timeline();
+  //animación svg
   var drawPath = gsap.to(
     $path, 
       { 
@@ -34,30 +32,19 @@
       onComplete:function(){ x.pause()}
   });
 	
-  /* ---------------------------------------------
-  CONTROLES DE AUDIO
-  ------------------------------------------------*/
-  //$("#1").on("scroll", console.log('scroll'));
-  $("#toggle-play").click(togglePlay);
-
+  //funcion para Pausar / reproducir Audio
   function togglePlay() { 
     if (x.currentTime === 0 || (x.paused && x.currentTime > 0 && !x.ended)){
-      x.play();
-      $("#audio").addClass('playing').removeClass('paused');
-      drawPath.play();
-      console.log('play');
-      console.log('time:', x.currentTime);
+      x.play(); //reproducir
+      drawPath.play(); //empieza anim
+
+      console.log('play', 'time:', x.currentTime);
     } else {
-      x.pause();
-      $("#audio").addClass('paused').removeClass('playing');
-      drawPath.pause();
-      console.log('pause');
-      console.log('time:', x.currentTime);
+      x.pause(); //pausar
+      drawPath.pause(); //pausar anim
+      console.log('pause', 'time:', x.currentTime);
     }
   }
-
-  if($("#audio").hasClass('playing')) {
-  console.log('currenttime: ', x.currentTime);
-  };
-
 })(jQuery, this);
+
+//$("#audio").addClass('paused').removeClass('playing');
