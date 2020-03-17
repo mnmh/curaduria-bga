@@ -32,11 +32,18 @@
   function togglePlay() { 
     if (x.currentTime === 0 || (x.paused && x.currentTime > 0 && !x.ended)){
       x.play();
+      $("#audio").addClass('playing').removeClass('paused');
       console.log('play');
     } else {
       x.pause();
+      $("#audio").addClass('paused').removeClass('playing');
       console.log('pause');
     }
   }
+
+  if($("#audio").hasClass('playing')) {
+  console.log('currenttime: ', x.currentTime);
+  };
+
 
 })(jQuery, this);
