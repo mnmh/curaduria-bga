@@ -1,44 +1,44 @@
 (function ($, root, undefined) {
 
-  var x = $("#audio")[0]; 
+  var x = $("#audio")[0];
+  var id = 1;
+  var $section = $('#'+ id);
+
+   /* ---------------------------------------------
+  ENCONTRAR INTERVALO DE TIEMPO
+  ------------------------------------------------*/
+  var audioFrom = $section.attr("audio-from");
+  var audioTo = $section.attr("audio-to");
+  console.log ('audio desde:', audioFrom, ' hasta: ', audioTo);
 
   /* ---------------------------------------------
   ANIMATE SVG
   ------------------------------------------------*/
-	function pathPrepare ($el) {
+	function pathPrepare ($p) {
 		var lineLength = $el[0].getTotalLength();
-		$el.css("stroke-dasharray", lineLength);
-		$el.css("stroke-dashoffset", lineLength);
+		$p.css("stroke-dasharray", lineLength);
+		$p.css("stroke-dashoffset", lineLength);
   }
   
-  var $path = $("path#path");
+  var $path = section.find("path");
   pathPrepare($path);
 
   //var tl = gsap.timeline();
   var drawPath = gsap.to(
     $path, 
-    30.3, 
       { 
+      duration: audioTo,
       strokeDashoffset: 0, 
       ease:Linear.easeNone,
       paused:true,
       onComplete:function(){ x.pause()}
-      
-
   });
-
-  
-
-  
-
-
 	
   /* ---------------------------------------------
   CONTROLES DE AUDIO
   ------------------------------------------------*/
   //$("#1").on("scroll", console.log('scroll'));
   $("#toggle-play").click(togglePlay);
-
 
   function togglePlay() { 
     if (x.currentTime === 0 || (x.paused && x.currentTime > 0 && !x.ended)){
@@ -59,6 +59,5 @@
   if($("#audio").hasClass('playing')) {
   console.log('currenttime: ', x.currentTime);
   };
-
 
 })(jQuery, this);

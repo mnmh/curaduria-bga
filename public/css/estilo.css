@@ -123,7 +123,9 @@ nav {
     stroke-dashoffset: 18922; } }
 
 section.dibujo {
-  border: 1px red solid; }
+  border: 1px red solid;
+  height: 90vh;
+  width: 100vw; }
   section.dibujo p {
     font-family: inter;
     font-weight: 100;
@@ -134,7 +136,8 @@ section.dibujo {
     text-align: center; }
 
 section.player {
-  margin: 40px; }
+  margin: 40px;
+  height: 20vh; }
   section.player button {
     display: block;
     margin: auto; }
