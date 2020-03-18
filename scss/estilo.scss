@@ -4,6 +4,7 @@ $fondo: #ffffff;
 
 body {
     font-family: Grotesk, sans-serif;
+    margin: 0;
 }
 
 h1,h2,h3 {
@@ -209,6 +210,28 @@ section.container {
     
     .player {
         margin: 40px;
+
+        .slider {
+            position: relative;
+            height: 4px;
+            margin: 20px auto;
+            width: 500px;
+            
+            .total {
+                position: absolute;
+                width: 100%;
+                height: 4px;
+                background-color: #dcdcdc;
+                border-radius: 2px;
+            }
+
+            .current {
+                position: absolute;
+                    height: 4px;
+                    top: 0.5px;
+                    background: $primario;
+            }
+        }
         button {
             display: block;
             margin: auto;

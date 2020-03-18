@@ -1,68 +1,63 @@
 (function ($, root, undefined) {
 
-  var x = $("#audio")[0];
+  var audio = document.getElementById("audio");
+  var $boton = $("#boton-audio");
 
   var id = 1;
   var $section = $('#'+ id);
   var $path = $section.find("path");
+  var lineLength = $path[0].getTotalLength();
   var audioFrom = $section.attr("audio-from");
   var audioTo = $section.attr("audio-to");
-  x.currentTime = parseFloat(audioFrom);
+  audio.currentTime = parseFloat(audioFrom);
   
-  //preparar path
-  pathPrepare($path);
-
+  
   //pausar reproducir audio
-  $("#toggle-play").click(togglePlay);
+  $boton.click(playPauseAudio);
 
-  //funcion para preparar el path
-	function pathPrepare ($p) {
-		var lineLength = $p[0].getTotalLength();
-		$p.css("stroke-dasharray", lineLength);
-		$p.css("stroke-dashoffset", lineLength);
+   //preparar path
+   pathPrepare($path);
+   //funcion para preparar el path
+   function pathPrepare ($p) {
+    $p.css("stroke-dasharray", lineLength);
+    $p.css("stroke-dashoffset", lineLength);
   }
-  
-  //animación svg
-  var drawPath = gsap.to(
-    $path, 
-      { 
-      duration: (audioTo - audioFrom),
-      strokeDashoffset: 0, 
-      ease:Linear.easeNone,
-      paused:true,
-      onComplete: playNext
-  });
 
-  //funcion para pasar a la siguiente seccion
-  function playNext() {
-    x.pause();
-    drawPath.pause();
-    $section.hide();
-
-    //update id
-    id++;
-    $section = $('#'+ id);
-    $section.show();
-    $path = $section.find("path");
-    audioFrom = $section.attr("audio-from");
-    audioTo = $section.attr("audio-to");
-    x.currentTime = audioFrom; //avanzar reproductor
-    pathPrepare($path);
+  function playPauseAudio() {
+    var playing = $boton.hasClass('playing') ? true : false;
     
-  }
-	
-  //funcion para Pausar / reproducir Audio
-  function togglePlay() { 
-    if (x.currentTime === 0 || (x.paused && x.currentTime > 0 && !x.ended)){
-      x.play(); //reproducir
-      drawPath.play(); //empieza anim
-      console.log('play', 'time:', x.currentTime);
+    if (!playing) {
+      $boton.removeClass('playing').removeClass('paused');
+      $boton.addClass('playing');
+
+      audio.play();
+
+      audio.ontimeupdate = () => {
+          var timeCurrent = audio.currentTime - audioFrom;
+          var timeTotal = audioTo - audioFrom;
+          updateAnimation(timeCurrent, timeTotal);
+    }
+
     } else {
-      x.pause(); //pausar
-      drawPath.pause(); //pausar anim
-      console.log('pause', 'time:', x.currentTime);
+      $boton.removeClass('playing').removeClass('paused');
+      $boton.addClass('paused');
+
+      audio.pause();
+    }
+
+    //funcion para controlar animaciones con el audio
+    function updateAnimation(current, total) {
+      var porcentaje = (current * 100)/total;
+      var pathOffset = lineLength - (lineLength * current/total);
+
+      $('.slider .current').attr('style', 'width: '+porcentaje+'%');
+
+      $path.css("stroke-dashoffset", pathOffset);
+
     }
   }
+
 })(jQuery, this);
 
-//$("#audio").addClass('paused').removeClass('playing');
+
+ 
