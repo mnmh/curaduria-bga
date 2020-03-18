@@ -1,13 +1,13 @@
 (function ($, root, undefined) {
 
-  var x = $("#audio")[0];
+  var audio = document.getElementById("audio");
 
   var id = 1;
   var $section = $('#'+ id);
   var $path = $section.find("path");
   var audioFrom = $section.attr("audio-from");
   var audioTo = $section.attr("audio-to");
-  x.currentTime = parseFloat(audioFrom);
+  audio.currentTime = parseFloat(audioFrom);
   
   //preparar path
   pathPrepare($path);
@@ -30,39 +30,17 @@
       strokeDashoffset: 0, 
       ease:Linear.easeNone,
       paused:true,
-      onComplete: playNext
+      onComplete: audio.pause()
   });
-
-  //funcion para pasar a la siguiente seccion
-  function playNext() {
-    x.pause();
-    drawPath.pause();
-    $section.hide();
-
-    //update id
-    id++;
-    $section = $('#'+ id);
-    $section.show();
-    $path = $section.find("path");
-    audioFrom = $section.attr("audio-from");
-    audioTo = $section.attr("audio-to");
-    x.currentTime = audioFrom; //avanzar reproductor
-    pathPrepare($path);
-    
-  }
-	
+  
   //funcion para Pausar / reproducir Audio
   function togglePlay() { 
-    if (x.currentTime === 0 || (x.paused && x.currentTime > 0 && !x.ended)){
-      x.play(); //reproducir
+    if (audio.currentTime === 0 || (audio.paused && audio.currentTime > 0 && !audio.ended)){
+      audio.play(); //reproducir
       drawPath.play(); //empieza anim
-      console.log('play', 'time:', x.currentTime);
     } else {
-      x.pause(); //pausar
+      audio.pause(); //pausar
       drawPath.pause(); //pausar anim
-      console.log('pause', 'time:', x.currentTime);
     }
   }
 })(jQuery, this);
-
-//$("#audio").addClass('paused').removeClass('playing');
