@@ -35,7 +35,7 @@
       audio.ontimeupdate = () => {
           var timeCurrent = audio.currentTime - audioFrom;
           var timeTotal = audioTo - audioFrom;
-          updateProgressBar(timeCurrent, timeTotal);
+          updateProgressBar( timeCurrent, timeTotal );
     }
 
     } else {
@@ -46,16 +46,25 @@
     }
   }
 
-    //funcion para controlar barra de progreso del audio
-    function updateAnimation(current, total) {
-      var porcentaje = (current * 100)/total;
-      $('.slider .current').attr('style', 'width: '+porcentaje+'%');
+    //funcion para controlar barra de progreso del a
+    function updateAnimation( current, total ) {
+      var porcentaje = ( current * 100 ) / total;
+      $( '.slider .current' ).attr( 'style', 'width: '+porcentaje+'%' ); 
   }
 
 })(jQuery, this);
 
 
-//$path.animate({ "stroke-dashoffset": pathOffset } );
+    /*//funcion para controlar barra de progreso del a
+    function updateAnimation(current, total) {
+      var porcentaje = (current * 100)/total;
+      var pathOffset = lineLength - (lineLength * current/total);
+
+      $('.slider .current').attr('style', 'width: '+porcentaje+'%');
+      $path.animate({ "stroke-dashoffset": pathOffset } );
+ 
+  }*/
+
 
 
  
