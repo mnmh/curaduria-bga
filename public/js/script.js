@@ -35,6 +35,14 @@
 
       audio.pause();
     }
+
+    //funcion para controlar animaciones con el audio
+    function updateAnimation(current, total) {
+      var porcentaje = ((current * 100)/total);
+      
+      $('.slider .current').attr('style', 'width: '+porcentaje+'%');
+
+    }
   }
 
 })(jQuery, this);
