@@ -2,36 +2,37 @@
 
   var audio = document.getElementById("audio");
   var $boton = $("#boton-audio");
-
-  var id = 1;
-  var $section = $('#'+ id);
-  var $path = $section.find("path");
-  var lineLength = $path[0].getTotalLength();
-  var audioFrom = $section.attr("audio-from");
-  var audioTo = $section.attr("audio-to");
-  audio.currentTime = parseFloat(audioFrom);
+  var totalSections = $( ".dibujo" ).length;
   
-  
-  //pausar reproducir audio
-  $boton.click(playPauseAudio);
+  var id = 0;
+  $section = $('#'+ id);
+  $path = $section.find("path");
+  audioFrom = $section.attr("audio-from");
+  audioTo = $section.attr("audio-to");
+  audio.currentTime = audioFrom;
 
-   //preparar path
-   pathPrepare($path);
+
+  pathPrepare($path); //preparar path
+  $boton.click(playPauseAudio); //pausar reproducir audio
+
    //funcion para preparar el path
    function pathPrepare ($p) {
+    var lineLength = $p[0].getTotalLength();
     $p.css("stroke-dasharray", lineLength);
     $p.css("stroke-dashoffset", lineLength);
   }
 
   function playPauseAudio() {
+    
     var playing = $boton.hasClass('playing') ? true : false;
     
     if (!playing) {
       $boton.removeClass('playing').removeClass('paused');
       $boton.addClass('playing');
 
-      audio.play();
-
+        audio.play();
+        drawPath.play();
+    
       audio.ontimeupdate = () => {
           var timeCurrent = audio.currentTime - audioFrom;
           var timeTotal = audioTo - audioFrom;
@@ -43,14 +44,26 @@
       $boton.addClass('paused');
 
       audio.pause();
+      drawPath.pause();
     }
   }
 
-    //funcion para controlar barra de progreso del a
-    function updateAnimation( current, total ) {
-      var porcentaje = ( current * 100 ) / total;
-      $( '.slider .current' ).attr( 'style', 'width: '+porcentaje+'%' ); 
+  //funcion para controlar barra de progreso del a
+  function updateProgressBar( current, total ) {
+    var porcentaje = ( current * 100 ) / total;
+    $( '.slider .current' ).attr( 'style', 'width: '+porcentaje+'%' ); 
   }
+
+  //funcion para animar el path
+  var drawPath = gsap.to(
+    $path, 
+      { 
+      duration: audioTo,
+      strokeDashoffset: 0, 
+      ease:Linear.easeNone,
+      paused:true,
+      onComplete:function(){ playPauseAudio() }
+  });
 
 })(jQuery, this);
 
