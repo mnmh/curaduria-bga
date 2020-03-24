@@ -4,6 +4,7 @@
   var $botPlay = $("#boton-audio");
   var $botNext = $("#boton-siguiente");
   var totalSections = $( ".dibujo" ).length;
+  console.log('toal sections: ', totalSections );
   var id = 0;
   var $section;
   var $path;
@@ -18,17 +19,10 @@
 
   //funcion para actualizar variables
   function updateValues(i) {
-    console.log('id: ', i);
+    //console.log('id: ', i);
 
     //revisa que aun hayan secciones
     if (i < totalSections) { 
-
-      //esconder la seccion anterior
-      var $seccionAnterior = $('#'+ (id - 1));
-      if  ( $seccionAnterior.length ) {
-        $seccionAnterior.hide();
-        console.log('hide section');
-      }
 
       //Actualizar variables
       $section = $('#'+ id);
@@ -56,7 +50,20 @@
   //funcion para cambiar a la siguiente seccion
   function playNext(){
     console.log('PlayNext');
-    updateValues(++id);
+    //esconder la seccion anterior
+    $section.hide();
+    drawPath.pause();
+    id++;
+
+    if (id === totalSections)  {
+      console.log('last section');
+      id = 0;
+      updateValues(id);
+
+    } else {
+      updateValues(id);
+    }
+
     playAudio();
   };
 
@@ -80,12 +87,13 @@
 
   //función para reproducir la pista de audio
   function playAudio() {
-    console.log('audio play');
+    //console.log('audio play');
     $botPlay.removeClass('playing').removeClass('paused');
     $botPlay.addClass('playing');
+
     audio.play();
     drawPath.play();
-  
+
     audio.ontimeupdate = () => {
         var timeCurrent = audio.currentTime - audioFrom;
         var timeTotal = audioTo - audioFrom;
@@ -95,10 +103,9 @@
 
   //función para pausar la pista de audio
   function pauseAudio() {
-    console.log('audio pause');
+    //console.log('audio pause');
     $botPlay.removeClass('playing').removeClass('paused');
       $botPlay.addClass('paused');
-
       audio.pause();
       drawPath.pause();
   }
