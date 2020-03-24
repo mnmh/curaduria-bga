@@ -11,11 +11,13 @@
   var audioFrom;
   var audioTo;
   var drawPath; //Animacion del path
+  var primeraVez = true;
   
   updateValues(id);
   $botPlay.click(playPauseAudio); //pausar reproducir audio
   $botNext.click(playNext); //pasar a siguiente pista
   $botPrev.click(playPrev); //pasar a siguiente pista
+
 
   //funcion para actualizar variables
   function updateValues(i) {
@@ -42,6 +44,37 @@
     $section.show(); //mostrar seccion actual
     
   }
+
+  $(window).scroll(function() {
+    if (primeraVez) {
+      var promise = audio.play(); //revisar si el usuario ha interactuado con la página
+
+      var top = $section.offset().top,
+          height = $section.outerHeight(),
+          wHeight = $(window).height(),
+          wScroll= $(this).scrollTop();
+
+      if (wScroll > (top+height-wHeight)){
+          console.log('scroll en seccion');
+
+          // revisa si puede hacer autoplay en al página
+          if (promise !== undefined) {
+
+            promise.then(_ => {
+
+              playPauseAudio();
+
+            }).catch(error => {
+
+              console.log('autoplay was prevented');
+              
+            });
+          }
+          
+          primeraVez = false;
+      }
+    }
+ });
 
   //funcion para cambiar a la siguiente seccion
   function playNext(){
