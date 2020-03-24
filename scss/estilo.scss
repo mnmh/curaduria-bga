@@ -2,9 +2,15 @@ $primario: #DB2A6B;
 $secundario: #24212D;
 $fondo: #ffffff;
 
+* {
+    box-sizing: border-box;
+}
+
 body {
     font-family: Grotesk, sans-serif;
-    margin: 0;
+    //margin: 0;
+    width: 100% !important;
+    margin: 0 !important;
 }
 
 h1,h2,h3 {
@@ -37,9 +43,15 @@ nav {
     display: flex;
     justify-content: space-between;
     padding: 40px;
+    
 
     a {
         color: $secundario;
+    }
+
+    @media screen and (max-width: 768px) {
+        padding: 20px;
+        font-size: 20px;
     }
 }
 
@@ -61,22 +73,26 @@ nav {
     }
 
     h1 {
-        font-size: 160px;
+        font-size: 18vw;
         margin: 10px;
     }
 
     h2 {
-        font-size: 40px;
+        font-size: 6vw;
     }
 
     svg {
         height: 100%;
-        width: auto;
+        width: 100%;
 
         path {
             stroke-dasharray: 9617.4462890625;
             animation: retrato 4s linear normal;
         }
+    }
+
+    @media screen and (max-width: 600px) {
+        height: 90vh;
     }
 }
 
@@ -96,12 +112,16 @@ nav {
     display: flex;
     flex-wrap: wrap;
 
+    @media screen and (max-width: 600px) {
+        margin: 0 auto 5vh auto;
+    }
+
     a {
         display: inline-block;
-        width: 28%;
         color: $primario;
         text-align: center;
         padding: 40px;
+        width: 33.3%;
         
         svg {
             stroke-width: 4px;
@@ -113,6 +133,15 @@ nav {
 
         &:nth-child(5n) {
             margin-right: auto
+        }
+
+        @media screen and (max-width: 768px) {
+            width: 50%;
+
+            &:nth-child(5n) {
+                margin-right: auto;
+                margin-left: auto;
+            }
         }
 
         &:hover {
@@ -141,7 +170,6 @@ nav {
                 animation: auras 8s linear alternate-reverse infinite;
             }
         }
-
     }
 }
 
