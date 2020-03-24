@@ -57,7 +57,7 @@
   function playNext(){
     console.log('PlayNext');
     updateValues(++id);
-    playPauseAudio();
+    playAudio();
   };
 
    //funcion para preparar el path
