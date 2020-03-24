@@ -16,15 +16,21 @@
 
   $botNext.click(playNext); //pasar a siguiente pista
 
+  //funcion para actualizar variables
   function updateValues(i) {
     console.log('id: ', i);
 
-    if (i < totalSections) { //revisa que aun hayan secciones
+    //revisa que aun hayan secciones
+    if (i < totalSections) { 
+
+      //esconder la seccion anterior
       var $seccionAnterior = $('#'+ (id - 1));
       if  ( $seccionAnterior.length ) {
         $seccionAnterior.hide();
         console.log('hide section');
       }
+
+      //Actualizar variables
       $section = $('#'+ id);
       $path = $section.find("path");
       audioFrom = $section.attr("audio-from");
@@ -47,6 +53,7 @@
     }
   }
 
+  //funcion para cambiar a la siguiente seccion
   function playNext(){
     console.log('PlayNext');
     updateValues(++id);
@@ -60,6 +67,7 @@
     $p.css("stroke-dashoffset", lineLength);
   }
 
+  // función para hacer toggle a reproducir/pausar audio
   function playPauseAudio() {
     var playing = $botPlay.hasClass('playing') ? true : false;
     
@@ -70,6 +78,7 @@
     }
   }
 
+  //función para reproducir la pista de audio
   function playAudio() {
     console.log('audio play');
     $botPlay.removeClass('playing').removeClass('paused');
@@ -84,6 +93,7 @@
     }
   }
 
+  //función para pausar la pista de audio
   function pauseAudio() {
     console.log('audio pause');
     $botPlay.removeClass('playing').removeClass('paused');
@@ -101,17 +111,6 @@
 
 
 })(jQuery, this);
-
-
-    /*//funcion para controlar barra de progreso del a
-    function updateAnimation(current, total) {
-      var porcentaje = (current * 100)/total;
-      var pathOffset = lineLength - (lineLength * current/total);
-
-      $('.slider .current').attr('style', 'width: '+porcentaje+'%');
-      $path.animate({ "stroke-dashoffset": pathOffset } );
- 
-  }*/
 
 
 
