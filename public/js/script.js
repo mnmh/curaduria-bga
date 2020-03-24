@@ -36,7 +36,7 @@
         strokeDashoffset: 0, 
         ease:Linear.easeNone,
         paused:true,
-        onComplete:function(){pauseAudio()}
+        onComplete:function(){playNext()}
     });
   
     $section.show(); //mostrar seccion actual
@@ -46,6 +46,7 @@
   //funcion para cambiar a la siguiente seccion
   function playNext(){
     console.log('PlayNext');
+    
     //esconder la seccion anterior
     $section.hide();
     drawPath.pause();
@@ -58,14 +59,15 @@
 
     } else {
       updateValues(id);
+      playAudio();
     }
 
-    playAudio();
   };
 
   //funcion para cambiar a la seccion anterior
   function playPrev(){
     console.log('PlayPrev');
+
     //esconder la seccion anterior
     $section.hide();
     drawPath.pause();
