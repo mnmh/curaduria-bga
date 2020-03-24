@@ -44,7 +44,6 @@ nav {
 }
 
 .hero {
-    //border: red 2px solid;
     height: 90vh;
     width: 100%;
     color: $primario;
@@ -192,7 +191,6 @@ nav {
 }
 
 section.container {
-    border: 1px red solid;
     height: 95vh;
     width: 100vw;
     margin-bottom: 5vh;
@@ -232,9 +230,14 @@ section.container {
                     background: $primario;
             }
         }
-        button {
-            display: block;
-            margin: auto;
+        .botones {
+            display: flex;
+            justify-content: center;
+
+            button {
+                //display: inline-block;
+                margin: 10px;
+            }
         }
     }
 }
