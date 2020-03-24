@@ -61,6 +61,9 @@ nav {
     .hero svg path {
       stroke-dasharray: 9617.4462890625;
       animation: retrato 4s linear normal; }
+  @media screen and (max-width: 600px) {
+    .hero {
+      height: 90vh; } }
 
 @keyframes retrato {
   from {
@@ -73,6 +76,9 @@ nav {
   margin: 15vh auto;
   display: flex;
   flex-wrap: wrap; }
+  @media screen and (max-width: 600px) {
+    .menu {
+      margin: 0 auto 5vh auto; } }
   .menu a {
     display: inline-block;
     color: #DB2A6B;

@@ -90,6 +90,10 @@ nav {
             animation: retrato 4s linear normal;
         }
     }
+
+    @media screen and (max-width: 600px) {
+        height: 90vh;
+    }
 }
 
 @keyframes retrato {
@@ -107,6 +111,10 @@ nav {
 
     display: flex;
     flex-wrap: wrap;
+
+    @media screen and (max-width: 600px) {
+        margin: 0 auto 5vh auto;
+    }
 
     a {
         display: inline-block;
