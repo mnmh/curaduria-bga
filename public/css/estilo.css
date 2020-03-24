@@ -1,6 +1,10 @@
+* {
+  box-sizing: border-box; }
+
 body {
   font-family: Grotesk, sans-serif;
-  margin: 0; }
+  width: 100% !important;
+  margin: 0 !important; }
 
 h1, h2, h3 {
   font-weight: normal; }
@@ -28,6 +32,10 @@ nav {
   padding: 40px; }
   nav a {
     color: #24212D; }
+  @media screen and (max-width: 768px) {
+    nav {
+      padding: 20px;
+      font-size: 20px; } }
 
 .hero {
   height: 90vh;
@@ -43,13 +51,13 @@ nav {
     position: absolute;
     mix-blend-mode: difference; }
   .hero h1 {
-    font-size: 160px;
+    font-size: 18vw;
     margin: 10px; }
   .hero h2 {
-    font-size: 40px; }
+    font-size: 6vw; }
   .hero svg {
     height: 100%;
-    width: auto; }
+    width: 100%; }
     .hero svg path {
       stroke-dasharray: 9617.4462890625;
       animation: retrato 4s linear normal; }
@@ -67,16 +75,22 @@ nav {
   flex-wrap: wrap; }
   .menu a {
     display: inline-block;
-    width: 28%;
     color: #DB2A6B;
     text-align: center;
-    padding: 40px; }
+    padding: 40px;
+    width: 33.3%; }
     .menu a svg {
       stroke-width: 4px; }
     .menu a:nth-child(4n) {
       margin-left: auto; }
     .menu a:nth-child(5n) {
       margin-right: auto; }
+    @media screen and (max-width: 768px) {
+      .menu a {
+        width: 50%; }
+        .menu a:nth-child(5n) {
+          margin-right: auto;
+          margin-left: auto; } }
     .menu a:hover .delicias {
       stroke-dasharray: 4550;
       animation: delicias 8s linear alternate-reverse infinite; }
