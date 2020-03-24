@@ -232,9 +232,14 @@ section.container {
                     background: $primario;
             }
         }
-        button {
-            display: block;
-            margin: auto;
+        .botones {
+            display: flex;
+            justify-content: center;
+
+            button {
+                //display: inline-block;
+                margin: 10px;
+            }
         }
     }
 }

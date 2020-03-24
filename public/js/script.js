@@ -79,7 +79,7 @@
       strokeDashoffset: 0, 
       ease:Linear.easeNone,
       paused:true,
-      onComplete:function(){playNext()}
+      onComplete:function(){audio.pause()}
   });
 
   function playNext(){

@@ -154,9 +154,11 @@ section.container {
         height: 4px;
         top: 0.5px;
         background: #DB2A6B; }
-    section.container .player button {
-      display: block;
-      margin: auto; }
+    section.container .player .botones {
+      display: flex;
+      justify-content: center; }
+      section.container .player .botones button {
+        margin: 10px; }
 
 @font-face {
   font-family: 'Grotesk';
