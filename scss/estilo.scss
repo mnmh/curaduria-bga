@@ -235,8 +235,39 @@ section.container {
             justify-content: center;
 
             button {
-                //display: inline-block;
+                border: none;
+
+                &:focus{
+                    outline:0;
+                }
+            }
+
+            #boton-anterior{
+                background-image: url('../svg/prev.svg');
+                background-repeat: no-repeat;
                 margin: 10px;
+                padding: 20px;
+            }
+
+            #boton-siguiente{
+                background-image: url('../svg/next.svg');
+                background-repeat: no-repeat;
+                margin: 10px;
+                padding: 20px;
+            }
+
+            #boton-audio {
+                background-image: url('../svg/play.svg');
+                background-repeat: no-repeat;
+                padding: 12px;
+                margin: 7px 25px 0 30px;
+            }
+
+            #boton-audio.playing {
+                background-image: url('../svg/pause.svg');
+                background-repeat: no-repeat;
+                padding: 12px;
+                margin: 9px 25px 0 30px;
             }
         }
     }

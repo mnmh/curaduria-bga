@@ -157,7 +157,29 @@ section.container {
       display: flex;
       justify-content: center; }
       section.container .player .botones button {
-        margin: 10px; }
+        border: none; }
+        section.container .player .botones button:focus {
+          outline: 0; }
+      section.container .player .botones #boton-anterior {
+        background-image: url("../svg/prev.svg");
+        background-repeat: no-repeat;
+        margin: 10px;
+        padding: 20px; }
+      section.container .player .botones #boton-siguiente {
+        background-image: url("../svg/next.svg");
+        background-repeat: no-repeat;
+        margin: 10px;
+        padding: 20px; }
+      section.container .player .botones #boton-audio {
+        background-image: url("../svg/play.svg");
+        background-repeat: no-repeat;
+        padding: 12px;
+        margin: 7px 25px 0 30px; }
+      section.container .player .botones #boton-audio.playing {
+        background-image: url("../svg/pause.svg");
+        background-repeat: no-repeat;
+        padding: 12px;
+        margin: 9px 25px 0 30px; }
 
 @font-face {
   font-family: 'Grotesk';
