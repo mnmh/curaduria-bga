@@ -82,12 +82,15 @@ nav {
     }
 
     h1 {
-        font-size: 18vw;
+        font-size: 16vw;
         margin: 10px;
     }
 
     h2 {
-        font-size: 6vw;
+        font-size: 3vw;
+        @media screen and (max-width: 600px) {
+            font-size: 18px;
+        }
     }
 
     svg {

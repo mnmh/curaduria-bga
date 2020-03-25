@@ -57,10 +57,13 @@ nav {
     position: absolute;
     mix-blend-mode: difference; }
   .hero h1 {
-    font-size: 18vw;
+    font-size: 16vw;
     margin: 10px; }
   .hero h2 {
-    font-size: 6vw; }
+    font-size: 3vw; }
+    @media screen and (max-width: 600px) {
+      .hero h2 {
+        font-size: 16px; } }
   .hero svg {
     height: 100%;
     width: 100%; }
