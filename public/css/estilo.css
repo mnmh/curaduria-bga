@@ -173,7 +173,7 @@ section.container {
       height: 4px;
       margin: 20px auto;
       width: 500px;
-      max-width: 95%; }
+      max-width: 90%; }
       section.container .player .slider .total {
         position: absolute;
         width: 100%;
@@ -218,6 +218,20 @@ section.container {
           padding: 18px; }
         section.container .player .botones #boton-audio {
           padding: 10px; } }
+
+section.contexto {
+  width: 1000px;
+  margin: 15vh auto 5vh auto;
+  text-align: center;
+  max-width: 90%; }
+  section.contexto h3 {
+    text-decoration: underline;
+    margin-bottom: 50px; }
+  section.contexto p {
+    font-family: inter;
+    font-weight: 100;
+    color: #24212D;
+    line-height: 2; }
 
 @font-face {
   font-family: 'Grotesk';

@@ -256,7 +256,7 @@ section.container {
             height: 4px;
             margin: 20px auto;
             width: 500px;
-            max-width: 95%;
+            max-width: 90%;
             
             .total {
                 position: absolute;
@@ -326,6 +326,25 @@ section.container {
                 }
             }
         }
+    }
+}
+
+section.contexto {
+    width: 1000px;
+    margin: 15vh auto 5vh auto;
+    text-align: center;
+    max-width: 90%;
+
+    h3 {
+        text-decoration: underline;
+        margin-bottom: 50px;
+    }
+
+    p {
+        font-family: inter;
+        font-weight: 100;
+        color: $secundario;
+        line-height: 2;
     }
 }
 
