@@ -277,6 +277,7 @@ section.container {
             display: flex;
             justify-content: center;
 
+
             button {
                 border: none;
                 background-color: white !important;
@@ -291,6 +292,7 @@ section.container {
                 background-repeat: no-repeat;
                 margin: 10px;
                 padding: 20px;
+    
             }
 
             #boton-siguiente{
@@ -312,6 +314,16 @@ section.container {
                 background-repeat: no-repeat;
                 padding: 12px;
                 margin: 9px 25px 0 30px;
+            }
+
+            @media screen and (max-width: 600px) {
+                #boton-anterior, #boton-siguiente {
+                    padding: 18px;
+                }
+
+                #boton-audio {
+                    padding: 10px;
+                }
             }
         }
     }

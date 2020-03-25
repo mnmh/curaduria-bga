@@ -190,7 +190,7 @@ section.container {
       justify-content: center; }
       section.container .player .botones button {
         border: none;
-        background-color: white; }
+        background-color: white !important; }
         section.container .player .botones button:focus {
           outline: 0; }
       section.container .player .botones #boton-anterior {
@@ -213,6 +213,11 @@ section.container {
         background-repeat: no-repeat;
         padding: 12px;
         margin: 9px 25px 0 30px; }
+      @media screen and (max-width: 600px) {
+        section.container .player .botones #boton-anterior, section.container .player .botones #boton-siguiente {
+          padding: 18px; }
+        section.container .player .botones #boton-audio {
+          padding: 10px; } }
 
 @font-face {
   font-family: 'Grotesk';
