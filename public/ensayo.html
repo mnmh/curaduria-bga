@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+		<link href="https://fonts.googleapis.com/css?family=Inter:300,400&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="./css/estilo.css" media="all">
+
+		<script type="text/javascript" src="./js/jquery.js"></script>
+		<script type="text/javascript" src="./js/gsap.js"></script>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.4/gsap.min.js"></script>
+
+		<title> Ensayo sin fin </title>
+
+	</head>
+
+	<body>
+		<audio id="audio"> 
+				<source src="audio/" type="audio/mpeg">
+		</audio>
+
+		<nav>
+			<a href="index.html"> Inicio </a>
+			<a href="#"> Sobre el proyecto </a>
+		</nav>
+		
+		<section class="hero inicio btm">
+
+			<!--svg -->
+				
+			<div class="titulos"> 
+				<h1> Ensayo <br> Sin Fin </h1>
+				<h3> (2010) </h3>
+			</div>
+
+		</section>
+
+		<section class="container">
+			<div class="dibujo" id="0" audio-from="0" audio-to="30.3">
+				<!--svg -->
+				<p> 
+					lorem lorem
+				</p>
+			</div>
+
+			<!-- Audio player -->
+			<div class="player">
+
+				<div class="slider">
+					<div class="total"></div>
+					<div class="current"></div>
+				</div>
+
+				<div class="botones">
+					<button id="boton-anterior">
+					</button>
+
+					<button id="boton-audio" type="button">
+					</button>
+
+					<button id="boton-siguiente" type="button">
+					</button>
+					
+				</div>
+
+			</div>
+
+		</section>
+
+		<!-- CONTEXTO HISTÓRICO -->
+		<section class="contexto">
+			<h3> Contexto histórico </h3>
+
+			<p>
+				Los asesinatos y las desapariciones no son un fenómeno de las últimas décadas, son
+				expresiones de violencia que ocurren desde hace más de medio siglo. El 9 de abril de 1948
+				comenzó en Bogotá lo que se conoce como ‘El Bogotazo’. Este fue un episodio de varios
+				días de violencia y destrucción que se extendió por todo el país y que fue desencadenando
+				la rabia generalizada que produjo el asesinato de Jorge Eliécer Gaitán, quien en ese
+				momento era candidato presidencial y representaba la esperanza para un cambio social en
+				el país.
+				<br>
+				<br>
+				‘El Bogotazo’ también dio inicio a La Violencia, un periodo de enfrentamientos bipartidistas -
+				entre conservadores y liberales- que dejó un sinnúmero de muertos y desaparecidos. Ese
+				momento puede considerarse el inicio del conflicto armado colombiano.
+				Uno de los más recientes y notorios homenajes que se han hecho, tanto a las víctimas
+				registradas como a las anónimas, fue la apertura del Centro de Memoria, Paz y
+				Reconciliación en Bogotá, ubicado en el globo B del Cementerio Central. Tanto el edificio
+				como las actividades que dentro de éste se llevan a cabo han sido desarrollados de la mano
+				de víctimas del conflicto armado. En el terreno en el que fue erigido el edificio y en el lote
+				adyacente, reposaban, entre otros, restos de muertos no identificados de El Bogotazo.	
+			</p>
+
+		</section>
+
+		<script type="text/javascript" src="./js/script.js"></script>
+		
+	</body>
+
+</html>

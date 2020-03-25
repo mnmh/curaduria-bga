@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+		<link href="https://fonts.googleapis.com/css?family=Inter:300,400&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="./css/estilo.css" media="all">
+
+		<script type="text/javascript" src="./js/jquery.js"></script>
+		<script type="text/javascript" src="./js/gsap.js"></script>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.4/gsap.min.js"></script>
+
+		<title>Señor presidente, que honro estar con ustted... </title>
+
+	</head>
+
+	<body>
+		<audio id="audio"> 
+				<source src="audio/" type="audio/mpeg">
+		</audio>
+
+		<nav>
+			<a href="index.html"> Inicio </a>
+			<a href="#"> Sobre el proyecto </a>
+		</nav>
+		
+		<section class="hero inicio btm">
+
+			<!--svg -->
+				
+			<div class="titulos"> 
+				<h1> Señor <br> presidente </h1>
+				<h3> qué honor estar con usted en este momento histórico </h3>
+				<h3> (1987) </h3>
+			</div>
+
+		</section>
+
+		<section class="container">
+			<div class="dibujo" id="0" audio-from="0" audio-to="30.3">
+				<!--svg -->
+				<p> 
+					lorem lorem
+				</p>
+			</div>
+
+			<!-- Audio player -->
+			<div class="player">
+
+				<div class="slider">
+					<div class="total"></div>
+					<div class="current"></div>
+				</div>
+
+				<div class="botones">
+					<button id="boton-anterior">
+					</button>
+
+					<button id="boton-audio" type="button">
+					</button>
+
+					<button id="boton-siguiente" type="button">
+					</button>
+					
+				</div>
+
+			</div>
+
+		</section>
+
+		<!-- CONTEXTO HISTÓRICO -->
+		<section class="contexto">
+			<h3> Contexto histórico </h3>
+
+			<p>
+				Hace 34 años, durante el 6 y 7 de noviembre de 1985, la guerrilla del M-19 se tomó el Palacio de Justicia y posteriormente el ejército colombiano realizó una retoma del lugar. Murieron 98 personas y desaparecieron 11 más en medio del fuego cruzado y del incendio que allí se presentó. Por esta razón, el estado colombiano fue condenado por la Corte Interamericana de Derechos Humanos, debido a su responsabilidad en los hechos ocurridos al no proteger a los civiles y a participar de manera directa en la realización de torturas, ejecuciones extrajudiciales y desapariciones forzadas. 
+				<br>
+				<br>
+				Durante estos años, familiares de las víctimas han venido exigiendo justicia frente a lo sucedido, pues algunos no han podido saber del paradero de sus familiares o sus restos no han sido entregados. Aunque se estableció una Comisión de la Verdad en el 2010 para esclarecer las dimensiones  y responsabilidades de lo ocurrido en el Palacio, la impunidad persiste en este caso. Sin embargo, los familiares y organizaciones no olvidan y anualmente se reúnen para conmemorar a través de distintas acciones y expresiones artísticas, la memoria de sus desaparecidos. 
+					
+			</p>
+
+		</section>
+
+		<script type="text/javascript" src="./js/script.js"></script>
+		
+	</body>
+
+</html>
