@@ -19,6 +19,10 @@ h1,h2,h3 {
 
 p {
     font-size: 18px;
+
+    @media screen and (max-width: 768px) {
+        font-size: 16px;
+    }
 }
 
 h3 {
@@ -32,6 +36,11 @@ svg {
 
 .btm {
     margin-bottom: 15vh;
+
+    @media screen and (max-width: 768px) {
+        margin-bottom: 5vh;
+    }
+
 }
 
 a {
@@ -228,10 +237,15 @@ section.container {
         font-weight: 100;
         color: $secundario;
         line-height: 1.8;
-        max-width: 1000px;
+        width: 1000px;
         margin: 5vh auto 0 auto;
         text-align: center;
+        max-width: 95%;
+    }
 
+    @media screen and (max-width: 768px) {
+        height: 80vh;
+        margin-bottom: 0;
     }
     
     .player {
@@ -242,6 +256,7 @@ section.container {
             height: 4px;
             margin: 20px auto;
             width: 500px;
+            max-width: 95%;
             
             .total {
                 position: absolute;
@@ -262,8 +277,10 @@ section.container {
             display: flex;
             justify-content: center;
 
+
             button {
                 border: none;
+                background-color: white !important;
 
                 &:focus{
                     outline:0;
@@ -275,6 +292,7 @@ section.container {
                 background-repeat: no-repeat;
                 margin: 10px;
                 padding: 20px;
+    
             }
 
             #boton-siguiente{
@@ -296,6 +314,16 @@ section.container {
                 background-repeat: no-repeat;
                 padding: 12px;
                 margin: 9px 25px 0 30px;
+            }
+
+            @media screen and (max-width: 600px) {
+                #boton-anterior, #boton-siguiente {
+                    padding: 18px;
+                }
+
+                #boton-audio {
+                    padding: 10px;
+                }
             }
         }
     }
