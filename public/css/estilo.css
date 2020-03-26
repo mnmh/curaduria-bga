@@ -239,7 +239,7 @@ section.container {
 
 section.contexto {
   width: 1000px;
-  margin: 15vh auto 5vh auto;
+  margin: 15vh auto 15vh auto;
   text-align: center;
   max-width: 90%; }
   section.contexto h3 {
@@ -250,6 +250,45 @@ section.contexto {
     font-weight: 100;
     color: #24212D;
     line-height: 2; }
+
+section.sobre {
+  margin: 10vh auto;
+  width: 1000px;
+  max-width: 95%; }
+  section.sobre p {
+    font-family: inter;
+    font-weight: 100;
+    font-size: 30px;
+    line-height: 2;
+    text-align: left; }
+    @media screen and (max-width: 768px) {
+      section.sobre p {
+        font-size: 20px !important; } }
+
+section.creditos {
+  font-family: inter;
+  margin: 0 auto 10vh auto;
+  width: 900px;
+  max-width: 90%; }
+  section.creditos h3 {
+    font-size: 24px;
+    text-align: center;
+    margin: 0 auto 5vh auto;
+    text-decoration: underline; }
+    @media screen and (max-width: 768px) {
+      section.creditos h3 {
+        font-size: 20px !important; } }
+  section.creditos p {
+    font-weight: 100;
+    line-height: 2.2;
+    font-size: 20px;
+    text-align: center; }
+    @media screen and (max-width: 768px) {
+      section.creditos p {
+        font-size: 18px !important; } }
+    section.creditos p a {
+      color: #24212D;
+      text-decoration: underline; }
 
 @font-face {
   font-family: 'Grotesk';
