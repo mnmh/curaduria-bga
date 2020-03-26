@@ -98,8 +98,33 @@ nav {
         width: 100%;
 
         path {
-            stroke-dasharray: 9617.4462890625;
+            stroke-dasharray: 9617commit;
             animation: retrato 4s linear normal;
+        }
+
+        path.ensayo {
+            stroke-dasharray: 9461;
+            animation: ensayo 5s linear normal;
+        }
+
+        path.auras {
+            stroke-dasharray: 5170;
+            animation: auras 5s linear normal;
+        }
+
+        path.delicias {
+            stroke-dasharray: 9083;
+            animation: delicias 5s linear normal;
+        }
+
+        path.presidente {
+            stroke-dasharray: 8790;
+            animation: presidente 5s linear normal;
+        }
+
+        path.tumulo {
+            stroke-dasharray: 9835;
+            animation: tumulo 5s linear normal;
         }
     }
 
@@ -174,12 +199,12 @@ nav {
 
             .tumulo {
                 stroke-dasharray: 4918;
-                animation: auras 8s linear alternate-reverse infinite;
+                animation: tumulo 8s linear alternate-reverse infinite;
             }
 
             .ensayo {
                 stroke-dasharray: 4731;
-                animation: auras 8s linear alternate-reverse infinite;
+                animation: ensayo 8s linear alternate-reverse infinite;
             }
         }
     }
@@ -231,7 +256,7 @@ nav {
 }
 
 section.container {
-    height: 95vh;
+    min-height: 95vh;
     width: 100vw;
     margin-bottom: 5vh;
 

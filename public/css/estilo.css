@@ -68,8 +68,23 @@ nav {
     height: 100%;
     width: 100%; }
     .hero svg path {
-      stroke-dasharray: 9617.4462890625;
+      stroke-dasharray: 9617commit;
       animation: retrato 4s linear normal; }
+    .hero svg path.ensayo {
+      stroke-dasharray: 9461;
+      animation: ensayo 5s linear normal; }
+    .hero svg path.auras {
+      stroke-dasharray: 5170;
+      animation: auras 5s linear normal; }
+    .hero svg path.delicias {
+      stroke-dasharray: 9083;
+      animation: delicias 5s linear normal; }
+    .hero svg path.presidente {
+      stroke-dasharray: 8790;
+      animation: presidente 5s linear normal; }
+    .hero svg path.tumulo {
+      stroke-dasharray: 9835;
+      animation: tumulo 5s linear normal; }
   @media screen and (max-width: 600px) {
     .hero {
       height: 90vh; } }
@@ -117,10 +132,10 @@ nav {
       animation: auras 8s linear alternate-reverse infinite; }
     .menu a:hover .tumulo {
       stroke-dasharray: 4918;
-      animation: auras 8s linear alternate-reverse infinite; }
+      animation: tumulo 8s linear alternate-reverse infinite; }
     .menu a:hover .ensayo {
       stroke-dasharray: 4731;
-      animation: auras 8s linear alternate-reverse infinite; }
+      animation: ensayo 8s linear alternate-reverse infinite; }
 
 @keyframes delicias {
   from {
@@ -153,7 +168,7 @@ nav {
     stroke-dashoffset: 18922; } }
 
 section.container {
-  height: 95vh;
+  min-height: 95vh;
   width: 100vw;
   margin-bottom: 5vh; }
   section.container p {
