@@ -79,10 +79,16 @@ nav {
     .titulos, svg {
         position: absolute;
         mix-blend-mode: difference;
+
+        &:hover {
+            mix-blend-mode: color;
+        }
     }
 
+    .titulos
+
     h1 {
-        font-size: 16vw;
+        font-size: 14vw;
         margin: 10px;
     }
 
@@ -98,7 +104,7 @@ nav {
         width: 100%;
 
         path {
-            stroke-dasharray: 9617commit;
+            stroke-dasharray: 9617;
             animation: retrato 4s linear normal;
         }
 
@@ -212,46 +218,46 @@ nav {
 
 @keyframes delicias {
     from {
-        stroke-dashoffset: 0;
+        stroke-dashoffset: 9100;
       }
     to {
-        stroke-dashoffset: 18166;
+        stroke-dashoffset: 0;
       }
 }
 
 @keyframes presidente {
     from {
-        stroke-dashoffset: 0;
+        stroke-dashoffset: 8776;
       }
     to {
-        stroke-dashoffset: 17580;
+        stroke-dashoffset: 0;
       }
 }
 
 @keyframes auras {
     from {
-        stroke-dashoffset: 0;
+        stroke-dashoffset: 5200;
       }
     to {
-        stroke-dashoffset: 10340;
+        stroke-dashoffset: 0;
       }
 }
 
 @keyframes tumulo {
     from {
-        stroke-dashoffset: 0;
+        stroke-dashoffset: 8400;
       }
     to {
-        stroke-dashoffset: 19670;
+        stroke-dashoffset: 0;
       }
 }
 
 @keyframes ensayo {
     from {
-        stroke-dashoffset: 0;
+        stroke-dashoffset: 9500;
       }
     to {
-        stroke-dashoffset: 18922;
+        stroke-dashoffset: 0;
       }
 }
 

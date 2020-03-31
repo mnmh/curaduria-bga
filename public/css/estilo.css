@@ -56,8 +56,11 @@ nav {
   .hero .titulos, .hero svg {
     position: absolute;
     mix-blend-mode: difference; }
-  .hero h1 {
-    font-size: 16vw;
+    .hero .titulos:hover, .hero svg:hover {
+      mix-blend-mode: color; }
+  .hero .titulos
+h1 {
+    font-size: 14vw;
     margin: 10px; }
   .hero h2 {
     font-size: 3vw; }
@@ -68,7 +71,7 @@ nav {
     height: 100%;
     width: 100%; }
     .hero svg path {
-      stroke-dasharray: 9617commit;
+      stroke-dasharray: 9617;
       animation: retrato 4s linear normal; }
     .hero svg path.ensayo {
       stroke-dasharray: 9461;
@@ -139,33 +142,33 @@ nav {
 
 @keyframes delicias {
   from {
-    stroke-dashoffset: 0; }
+    stroke-dashoffset: 9100; }
   to {
-    stroke-dashoffset: 18166; } }
+    stroke-dashoffset: 0; } }
 
 @keyframes presidente {
   from {
-    stroke-dashoffset: 0; }
+    stroke-dashoffset: 8776; }
   to {
-    stroke-dashoffset: 17580; } }
+    stroke-dashoffset: 0; } }
 
 @keyframes auras {
   from {
-    stroke-dashoffset: 0; }
+    stroke-dashoffset: 5200; }
   to {
-    stroke-dashoffset: 10340; } }
+    stroke-dashoffset: 0; } }
 
 @keyframes tumulo {
   from {
-    stroke-dashoffset: 0; }
+    stroke-dashoffset: 8400; }
   to {
-    stroke-dashoffset: 19670; } }
+    stroke-dashoffset: 0; } }
 
 @keyframes ensayo {
   from {
-    stroke-dashoffset: 0; }
+    stroke-dashoffset: 9500; }
   to {
-    stroke-dashoffset: 18922; } }
+    stroke-dashoffset: 0; } }
 
 section.container {
   min-height: 95vh;
