@@ -176,7 +176,7 @@ section.container {
   margin-bottom: 5vh; }
   section.container p {
     font-family: inter;
-    font-weight: 100;
+    font-weight: light;
     color: #24212D;
     line-height: 1.8;
     width: 1000px;
@@ -250,7 +250,7 @@ section.contexto {
     margin-bottom: 50px; }
   section.contexto p {
     font-family: inter;
-    font-weight: 100;
+    font-weight: light;
     color: #24212D;
     line-height: 2; }
 
@@ -260,7 +260,7 @@ section.sobre {
   max-width: 95%; }
   section.sobre p {
     font-family: inter;
-    font-weight: 100;
+    font-weight: light;
     font-size: 30px;
     line-height: 2;
     text-align: left; }
@@ -282,7 +282,7 @@ section.creditos {
       section.creditos h3 {
         font-size: 20px !important; } }
   section.creditos p {
-    font-weight: 100;
+    font-weight: light;
     line-height: 2.2;
     font-size: 20px;
     text-align: center; }
@@ -295,20 +295,20 @@ section.creditos {
 
 @font-face {
   font-family: 'Grotesk';
-  src: url("../fonts/Grotesk-Medium.eot");
-  font-weight: normal; }
-
-@font-face {
-  font-family: 'Grotesk';
   src: url("../fonts/Grotesk-Medium.woff2") format("woff2"), url("../fonts/Grotesk-Medium.woff") format("woff");
   font-weight: normal; }
 
 @font-face {
-  font-family: 'Grotesk';
-  src: url("../fonts/Grotesk-Medium.svg") format("svg");
+  font-family: inter;
+  src: url("../fonts/Inter-Regular.woff2") format("woff2"), url("../fonts/Inter-Regular.woff") format("woff");
   font-weight: normal; }
 
 @font-face {
-  font-family: 'Grotesk';
-  src: url("../fonts/Grotesk-Medium.ttf") format("truetype");
+  font-family: inter;
+  src: url("../fonts/Inter-Regular.woff2") format("woff2"), url("../fonts/Inter-Regular.woff") format("woff");
   font-weight: normal; }
+
+@font-face {
+  font-family: inter;
+  src: url("../fonts/Inter-Light.woff2") format("woff2"), url("../fonts/Inter-Light.woff") format("woff");
+  font-weight: light; }

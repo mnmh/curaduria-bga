@@ -268,7 +268,7 @@ section.container {
 
     p {
         font-family: inter;
-        font-weight: 100;
+        font-weight: light;
         color: $secundario;
         line-height: 1.8;
         width: 1000px;
@@ -376,7 +376,7 @@ section.contexto {
 
     p {
         font-family: inter;
-        font-weight: 100;
+        font-weight: light;
         color: $secundario;
         line-height: 2;
     }
@@ -389,7 +389,7 @@ section.sobre {
 
     p {
         font-family: inter;
-        font-weight: 100;
+        font-weight: light;
         font-size: 30px;
         line-height: 2;
         text-align: left;
@@ -419,7 +419,7 @@ section.creditos {
     }
 
     p {
-        font-weight: 100;
+        font-weight: light;
         line-height: 2.2;
         font-size: 20px;
         text-align: center;
@@ -439,41 +439,17 @@ section.creditos {
 
 //Grotesk font
 @font-face {
-    font-family: 'Grotesk';
-    src: url('../fonts/Grotesk-Medium.eot');
-    font-weight: normal;
-    }
-    
-    @font-face {
-    font-family: 'Grotesk';
-    src:
-    url('../fonts/Grotesk-Medium.woff2') format('woff2'),
-    url('../fonts/Grotesk-Medium.woff') format('woff');
-    font-weight: normal;
-    }
-    
-    @font-face {
-    font-family: 'Grotesk';
-    src: url('../fonts/Grotesk-Medium.svg') format('svg');
-    font-weight: normal;
-    }
-    
-    @font-face {
-    font-family: 'Grotesk';
-    src: url('../fonts/Grotesk-Medium.ttf') format('truetype');
-    font-weight: normal;
-    }
-
-
-// Inter font
-@font-face {
-    font-family: 'inter';
-    src: url('../fonts/Inter-Regular.ttf') format('truetype');
-    font-weight: normal;
+font-family: 'Grotesk';
+src:
+url('../fonts/Grotesk-Medium.woff2') format('woff2'),
+url('../fonts/Grotesk-Medium.woff') format('woff');
+font-weight: normal;
 }
 
+// Inter font
+
 @font-face {
-    font-family: 'inter';
+    font-family: inter;
     src:
     url('../fonts/Inter-Regular.woff2') format('woff2'),
     url('../fonts/Inter-Regular.woff') format('woff');
@@ -481,7 +457,18 @@ section.creditos {
 }
 
 @font-face {
-    font-family: 'inter';
-    src: url('../fonts/Inter-Regular.otf') format("opentype");
+    font-family: inter;
+    src:
+    url('../fonts/Inter-Regular.woff2') format('woff2'),
+    url('../fonts/Inter-Regular.woff') format('woff');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: inter;
+    src:
+    url('../fonts/Inter-Light.woff2') format('woff2'),
+    url('../fonts/Inter-Light.woff') format('woff');
+    font-weight: light;
 }
 
