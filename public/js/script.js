@@ -89,6 +89,7 @@
       console.log('last section');
       id = 0;
       updateValues(id);
+      playAudio();
 
     } else {
       updateValues(id);
