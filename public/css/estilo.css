@@ -184,7 +184,6 @@ section.container {
     max-width: 95%; }
   @media screen and (max-width: 768px) {
     section.container {
-      height: 80vh;
       margin-bottom: 0; } }
   section.container .player {
     margin: 40px; }
