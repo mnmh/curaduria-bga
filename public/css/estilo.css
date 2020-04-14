@@ -171,11 +171,10 @@ h1 {
     stroke-dashoffset: 0; } }
 
 section.container {
-  min-height: 95vh;
   width: 100vw;
   margin-bottom: 5vh; }
   section.container p {
-    font-family: inter;
+    font-family: inter, sans-serif;
     font-weight: light;
     color: #24212D;
     line-height: 1.8;
@@ -249,7 +248,7 @@ section.contexto {
     text-decoration: underline;
     margin-bottom: 50px; }
   section.contexto p {
-    font-family: inter;
+    font-family: inter, sans-serif;
     font-weight: light;
     color: #24212D;
     line-height: 2; }
@@ -259,7 +258,7 @@ section.sobre {
   width: 1000px;
   max-width: 95%; }
   section.sobre p {
-    font-family: inter;
+    font-family: inter, sans-serif;
     font-weight: light;
     font-size: 30px;
     line-height: 2;
@@ -269,7 +268,7 @@ section.sobre {
         font-size: 20px !important; } }
 
 section.creditos {
-  font-family: inter;
+  font-family: inter, sans-serif;
   margin: 0 auto 10vh auto;
   width: 900px;
   max-width: 95%; }
@@ -296,11 +295,6 @@ section.creditos {
 @font-face {
   font-family: 'Grotesk';
   src: url("../fonts/Grotesk-Medium.woff2") format("woff2"), url("../fonts/Grotesk-Medium.woff") format("woff");
-  font-weight: normal; }
-
-@font-face {
-  font-family: inter;
-  src: url("../fonts/Inter-Regular.woff2") format("woff2"), url("../fonts/Inter-Regular.woff") format("woff");
   font-weight: normal; }
 
 @font-face {
