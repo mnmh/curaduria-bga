@@ -463,3 +463,25 @@ section.creditos {
     src: url('../fonts/Grotesk-Medium.ttf') format('truetype');
     font-weight: normal;
     }
+
+
+// Inter font
+@font-face {
+    font-family: 'inter';
+    src: url('../fonts/Inter-Regular.ttf') format('truetype');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'inter';
+    src:
+    url('../fonts/Inter-Regular.woff2') format('woff2'),
+    url('../fonts/Inter-Regular.woff') format('woff');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'inter';
+    src: url('../fonts/Inter-Regular.otf') format("opentype");
+}
+
