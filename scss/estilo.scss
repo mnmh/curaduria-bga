@@ -382,6 +382,71 @@ section.contexto {
     }
 }
 
+
+section.galeria {
+    width: 1000px;
+    margin: 15vh auto 15vh auto;
+    max-width: 90%;
+    overflow: hidden;
+
+    h3 {
+        text-decoration: underline;
+        margin-bottom: 50px;
+        text-align: center;
+    }
+
+
+
+    a {
+        text-decoration: none;
+        width: 50%;
+        float:left;
+        padding: 20px;
+        height: 400px;
+
+        img {
+            width: 100%;
+            object-fit: cover;
+        }
+
+        p {
+            font-family: inter, sans-serif;
+            font-weight: light;
+            color: $secundario;
+            line-height: 1; 
+            margin-bottom: 20px;
+            
+        }
+    }
+}
+
+.modal {
+    .modal-background {
+        background-color: $fondo;
+        opacity: 75%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .modal-close {
+        position: fixed;
+        top: 40px;
+        right: 40px;
+        text-decoration: underline;
+        font-size: 24px;
+        color: $secundario;
+
+        &:hover {
+            color: $primario;
+            cursor: pointer;
+        }
+    }
+}
+
+
 section.sobre {
     margin: 10vh auto;
     width: 1000px;

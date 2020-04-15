@@ -252,6 +252,51 @@ section.contexto {
     color: #24212D;
     line-height: 2; }
 
+section.galeria {
+  width: 1000px;
+  margin: 15vh auto 15vh auto;
+  max-width: 90%;
+  overflow: hidden; }
+  section.galeria h3 {
+    text-decoration: underline;
+    margin-bottom: 50px;
+    text-align: center; }
+  section.galeria a {
+    text-decoration: none;
+    width: 50%;
+    float: left;
+    padding: 20px;
+    height: 400px; }
+    section.galeria a img {
+      width: 100%;
+      object-fit: cover; }
+    section.galeria a p {
+      font-family: inter, sans-serif;
+      font-weight: light;
+      color: #24212D;
+      line-height: 1;
+      margin-bottom: 20px; }
+
+.modal .modal-background {
+  background-color: #ffffff;
+  opacity: 75%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; }
+
+.modal .modal-close {
+  position: fixed;
+  top: 40px;
+  right: 40px;
+  text-decoration: underline;
+  font-size: 24px;
+  color: #24212D; }
+  .modal .modal-close:hover {
+    color: #DB2A6B;
+    cursor: pointer; }
+
 section.sobre {
   margin: 10vh auto;
   width: 1000px;
