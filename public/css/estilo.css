@@ -253,29 +253,36 @@ section.contexto {
     line-height: 2; }
 
 section.galeria {
-  width: 1000px;
+  width: 1020px;
   margin: 15vh auto 15vh auto;
-  max-width: 90%;
-  overflow: hidden; }
+  max-width: 90%; }
   section.galeria h3 {
     text-decoration: underline;
     margin-bottom: 50px;
     text-align: center; }
-  section.galeria a {
-    text-decoration: none;
-    width: 50%;
-    float: left;
-    padding: 20px;
-    height: 400px; }
-    section.galeria a img {
-      width: 100%;
-      object-fit: cover; }
-    section.galeria a p {
-      font-family: inter, sans-serif;
-      font-weight: light;
-      color: #24212D;
-      line-height: 1;
-      margin-bottom: 20px; }
+  section.galeria .imagenes {
+    display: flex;
+    flex-wrap: wrap; }
+    section.galeria .imagenes a {
+      text-decoration: none;
+      width: 33%;
+      padding: 10px; }
+      @media screen and (max-width: 850px) {
+        section.galeria .imagenes a {
+          width: 50%; } }
+      @media screen and (max-width: 650px) {
+        section.galeria .imagenes a {
+          width: 100%; } }
+      section.galeria .imagenes a img {
+        width: 100%;
+        object-fit: cover;
+        max-height: 400px; }
+      section.galeria .imagenes a p {
+        font-family: inter, sans-serif;
+        font-weight: light;
+        color: #24212D;
+        line-height: 1;
+        margin-bottom: 20px; }
 
 .modal {
   display: none; }
@@ -311,7 +318,7 @@ section.galeria {
       display: block;
       margin: auto;
       max-height: 80%;
-      max-width: 90%; }
+      max-width: 100%; }
 
 section.sobre {
   margin: 10vh auto;

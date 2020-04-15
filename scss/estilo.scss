@@ -384,10 +384,10 @@ section.contexto {
 
 
 section.galeria {
-    width: 1000px;
+    width: 1020px;
     margin: 15vh auto 15vh auto;
     max-width: 90%;
-    overflow: hidden;
+    
 
     h3 {
         text-decoration: underline;
@@ -395,27 +395,39 @@ section.galeria {
         text-align: center;
     }
 
+    .imagenes {
+        display: flex;
+        flex-wrap: wrap;
+
+        a {
+            text-decoration: none;
+            width: 33%;
+            padding: 10px;
 
 
-    a {
-        text-decoration: none;
-        width: 50%;
-        float:left;
-        padding: 20px;
-        height: 400px;
+            @media screen and (max-width: 850px) {
+                    width: 50%;
+            }
 
-        img {
-            width: 100%;
-            object-fit: cover;
-        }
+            @media screen and (max-width: 650px) {
+                width: 100%;
+            }
 
-        p {
-            font-family: inter, sans-serif;
-            font-weight: light;
-            color: $secundario;
-            line-height: 1; 
-            margin-bottom: 20px;
-            
+            img {
+                width: 100%;
+                object-fit: cover;
+                max-height: 400px;
+            }
+
+            p {
+                font-family: inter, sans-serif;
+                font-weight: light;
+                color: $secundario;
+                line-height: 1; 
+                margin-bottom: 20px;
+                
+            }
+
         }
     }
 }
@@ -462,7 +474,7 @@ section.galeria {
             display: block;
             margin: auto;
             max-height: 80%;
-            max-width: 90%;
+            max-width: 100%;
         }
     }
 }

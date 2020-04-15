@@ -2,15 +2,19 @@
     console.log('modal ready');
 
     $('.galeria a').on('click', function() {
+
         
-        $('.modal').fadeIn(200);
+
+        $('.modal-content').html($(this).html());
+        
+        $('.modal').fadeIn(300);
 
         return false;
     })
 
     $('.modal-close, .modal-background').on('click', function() {
         
-        $('.modal').hide();
+        $('.modal').fadeOut(300);
 
         return false;
     })
