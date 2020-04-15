@@ -421,9 +421,11 @@ section.galeria {
 }
 
 .modal {
+    display: none;
+
     .modal-background {
         background-color: $fondo;
-        opacity: 75%;
+        opacity: 90%;
         position: fixed;
         top: 0;
         left: 0;
@@ -433,15 +435,34 @@ section.galeria {
 
     .modal-close {
         position: fixed;
-        top: 40px;
-        right: 40px;
+        top: 0;
+        right: 0;
         text-decoration: underline;
         font-size: 24px;
         color: $secundario;
+        padding: 40px;
 
         &:hover {
             color: $primario;
             cursor: pointer;
+        }
+    }
+
+    .modal-content {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        width: 95%;
+        max-width: 1500px;
+        transform: translate(-50%, -50%);
+        padding-bottom: 20px;
+
+        img {
+            padding: 0;
+            display: block;
+            margin: auto;
+            max-height: 80%;
+            max-width: 90%;
         }
     }
 }

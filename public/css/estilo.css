@@ -277,25 +277,41 @@ section.galeria {
       line-height: 1;
       margin-bottom: 20px; }
 
-.modal .modal-background {
-  background-color: #ffffff;
-  opacity: 75%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%; }
-
-.modal .modal-close {
-  position: fixed;
-  top: 40px;
-  right: 40px;
-  text-decoration: underline;
-  font-size: 24px;
-  color: #24212D; }
-  .modal .modal-close:hover {
-    color: #DB2A6B;
-    cursor: pointer; }
+.modal {
+  display: none; }
+  .modal .modal-background {
+    background-color: #ffffff;
+    opacity: 90%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; }
+  .modal .modal-close {
+    position: fixed;
+    top: 0;
+    right: 0;
+    text-decoration: underline;
+    font-size: 24px;
+    color: #24212D;
+    padding: 40px; }
+    .modal .modal-close:hover {
+      color: #DB2A6B;
+      cursor: pointer; }
+  .modal .modal-content {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 95%;
+    max-width: 1500px;
+    transform: translate(-50%, -50%);
+    padding-bottom: 20px; }
+    .modal .modal-content img {
+      padding: 0;
+      display: block;
+      margin: auto;
+      max-height: 80%;
+      max-width: 90%; }
 
 section.sobre {
   margin: 10vh auto;
