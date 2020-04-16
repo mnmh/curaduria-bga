@@ -60,7 +60,7 @@ nav {
 
     a {
         color: $secundario;
-        font-size: 30px;
+        font-size: 26px;
 
         @media screen and (max-width: 650px) {
             font-size: 20px;
@@ -87,6 +87,14 @@ nav {
     flex-direction: column;
     text-align: center;
 
+    .logo {
+        width: 250px;
+        @media screen and (max-width: 800px) {
+            width: 150px;
+        }
+
+    }
+
     .titulos, svg {
         position: absolute;
         mix-blend-mode: difference;
@@ -105,6 +113,7 @@ nav {
 
     h2 {
         font-size: 3vw;
+        margin-bottom: 0.5em;
         @media screen and (max-width: 600px) {
             font-size: 20px;
         }

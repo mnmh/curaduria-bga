@@ -41,7 +41,7 @@ nav {
   padding: 40px; }
   nav a {
     color: #24212D;
-    font-size: 30px; }
+    font-size: 26px; }
     @media screen and (max-width: 650px) {
       nav a {
         font-size: 20px; } }
@@ -60,6 +60,11 @@ nav {
   align-items: center;
   flex-direction: column;
   text-align: center; }
+  .hero .logo {
+    width: 250px; }
+    @media screen and (max-width: 800px) {
+      .hero .logo {
+        width: 150px; } }
   .hero .titulos, .hero svg {
     position: absolute;
     mix-blend-mode: difference; }
@@ -70,7 +75,8 @@ h1 {
     font-size: 14vw;
     margin: 10px; }
   .hero h2 {
-    font-size: 3vw; }
+    font-size: 3vw;
+    margin-bottom: 0.5em; }
     @media screen and (max-width: 600px) {
       .hero h2 {
         font-size: 20px; } }
