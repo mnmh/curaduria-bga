@@ -3,9 +3,8 @@
 
     $('.galeria a').on('click', function() {
 
-        
-
         $('.modal-content').html($(this).html());
+        
         $(this).addClass("clicked");
         
         $('.modal').fadeIn(300);

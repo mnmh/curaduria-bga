@@ -25,14 +25,6 @@ p {
     }
 }
 
-h3 {
-    font-size: 24px;
-
-    @media screen and (max-width: 650px) {
-        font-size: 18px;
-    }
-}
-
 svg {
     stroke: $secundario;
     stroke-width: 2px;
@@ -51,6 +43,14 @@ a {
     text-decoration: underline;
 }
 
+h3 {
+    font-size: 24px;
+
+    @media screen and (max-width: 650px) {
+        font-size: 20px;
+    }
+}
+
 nav {
     font-size: 24px;
     display: flex;
@@ -60,12 +60,18 @@ nav {
 
     a {
         color: $secundario;
+        font-size: 30px;
+
+        @media screen and (max-width: 650px) {
+            font-size: 20px;
+        }
     }
 
     @media screen and (max-width: 768px) {
         padding: 20px;
         font-size: 20px;
     }
+
 }
 
 
@@ -520,15 +526,34 @@ section.sobre {
     width: 1000px;
     max-width: 95%;
 
+    span {
+        color: $primario;
+    }
+
     p {
         font-family: inter, sans-serif;
         font-weight: light;
-        font-size: 30px;
+        font-size: 24px;
         line-height: 2;
         text-align: left;
 
         @media screen and (max-width: 768px) {
             font-size: 20px !important;
+        }
+    }
+
+    .center {
+        text-align: center;
+        display: block;
+        margin: auto;
+    }
+
+    a {
+        color: $primario;
+        text-decoration: none;
+
+        &:hover {
+        text-decoration: underline;
         }
     }
 }
@@ -565,6 +590,10 @@ section.creditos {
             color: $secundario;
             text-decoration: underline;
         }
+    }
+
+    span {
+        color: $primario;
     }
 }
 

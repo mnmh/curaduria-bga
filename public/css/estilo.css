@@ -15,12 +15,6 @@ p {
     p {
       font-size: 16px; } }
 
-h3 {
-  font-size: 24px; }
-  @media screen and (max-width: 650px) {
-    h3 {
-      font-size: 18px; } }
-
 svg {
   stroke: #24212D;
   stroke-width: 2px; }
@@ -34,13 +28,23 @@ svg {
 a {
   text-decoration: underline; }
 
+h3 {
+  font-size: 24px; }
+  @media screen and (max-width: 650px) {
+    h3 {
+      font-size: 20px; } }
+
 nav {
   font-size: 24px;
   display: flex;
   justify-content: space-between;
   padding: 40px; }
   nav a {
-    color: #24212D; }
+    color: #24212D;
+    font-size: 30px; }
+    @media screen and (max-width: 650px) {
+      nav a {
+        font-size: 20px; } }
   @media screen and (max-width: 768px) {
     nav {
       padding: 20px;
@@ -346,15 +350,26 @@ section.sobre {
   margin: 10vh auto;
   width: 1000px;
   max-width: 95%; }
+  section.sobre span {
+    color: #DB2A6B; }
   section.sobre p {
     font-family: inter, sans-serif;
     font-weight: light;
-    font-size: 30px;
+    font-size: 24px;
     line-height: 2;
     text-align: left; }
     @media screen and (max-width: 768px) {
       section.sobre p {
         font-size: 20px !important; } }
+  section.sobre .center {
+    text-align: center;
+    display: block;
+    margin: auto; }
+  section.sobre a {
+    color: #DB2A6B;
+    text-decoration: none; }
+    section.sobre a:hover {
+      text-decoration: underline; }
 
 section.creditos {
   font-family: inter, sans-serif;
@@ -380,6 +395,8 @@ section.creditos {
     section.creditos p a {
       color: #24212D;
       text-decoration: underline; }
+  section.creditos span {
+    color: #DB2A6B; }
 
 @font-face {
   font-family: 'Grotesk';
