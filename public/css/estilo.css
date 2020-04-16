@@ -284,8 +284,13 @@ section.galeria {
         font-family: inter, sans-serif;
         font-weight: light;
         color: #24212D;
-        line-height: 1;
-        margin-bottom: 20px; }
+        line-height: 1.5;
+        margin-bottom: 30px;
+        hyphens: auto; }
+        section.galeria .imagenes a p span {
+          color: #DB2A6B; }
+      section.galeria .imagenes a .info {
+        display: none; }
 
 .modal {
   display: none; }

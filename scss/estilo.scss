@@ -431,9 +431,18 @@ section.galeria {
                 font-family: inter, sans-serif;
                 font-weight: light;
                 color: $secundario;
-                line-height: 1; 
-                margin-bottom: 20px;
+                line-height: 1.5; 
+                margin-bottom: 30px;
+                hyphens: auto;
+
+                span {
+                    color: $primario;
+                }
                 
+            }
+
+            .info {
+                display: none;
             }
 
         }
