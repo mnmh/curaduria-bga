@@ -266,7 +266,8 @@ section.galeria {
     section.galeria .imagenes a {
       text-decoration: none;
       width: 33%;
-      padding: 10px; }
+      padding: 10px;
+      margin-top: 10px; }
       section.galeria .imagenes a.clicked img {
         border: #DB2A6B 2px solid; }
       @media screen and (max-width: 850px) {
