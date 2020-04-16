@@ -64,6 +64,7 @@ nav {
     }
 }
 
+
 .hero {
     height: 90vh;
     width: 100%;
@@ -403,6 +404,12 @@ section.galeria {
             text-decoration: none;
             width: 33%;
             padding: 10px;
+
+            &.clicked {
+                img { 
+                    border: $primario 2px solid;
+                }
+            }
 
 
             @media screen and (max-width: 850px) {
