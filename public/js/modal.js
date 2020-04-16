@@ -1,5 +1,5 @@
 (function ($, root, undefined) {
-    console.log('modal ready');
+    //console.log('modal ready');
 
     $('.galeria a').on('click', function() {
 

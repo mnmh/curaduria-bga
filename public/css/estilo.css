@@ -366,7 +366,8 @@ section.sobre {
     text-align: left; }
     @media screen and (max-width: 768px) {
       section.sobre p {
-        font-size: 20px !important; } }
+        font-size: 17px !important;
+        margin: 5px; } }
   section.sobre .center {
     text-align: center;
     display: block;
@@ -397,7 +398,7 @@ section.creditos {
     text-align: center; }
     @media screen and (max-width: 768px) {
       section.creditos p {
-        font-size: 18px !important; } }
+        font-size: 15px !important; } }
     section.creditos p a {
       color: #24212D;
       text-decoration: underline; }

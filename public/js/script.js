@@ -55,7 +55,7 @@
           wScroll= $(this).scrollTop();
 
       if (wScroll > (top+height-wHeight)){
-          console.log('scroll en seccion');
+          //console.log('scroll en seccion');
 
           // revisa si puede hacer autoplay en al página
           if (promise !== undefined) {
@@ -66,7 +66,7 @@
 
             }).catch(error => {
 
-              console.log('autoplay was prevented');
+              //console.log('autoplay was prevented');
               
             });
           }
@@ -78,7 +78,7 @@
 
   //funcion para cambiar a la siguiente seccion
   function playNext(){
-    console.log('PlayNext');
+    //console.log('PlayNext');
     
     //esconder la seccion anterior
     $section.hide();
@@ -86,7 +86,7 @@
     id++;
 
     if (id === totalSections)  {
-      console.log('last section');
+      //console.log('last section');
       id = 0;
       updateValues(id);
       playAudio();
@@ -100,7 +100,7 @@
 
   //funcion para cambiar a la seccion anterior
   function playPrev(){
-    console.log('PlayPrev');
+    //console.log('PlayPrev');
 
     //esconder la seccion anterior
     $section.hide();
@@ -108,7 +108,7 @@
     id--;
 
     if (id < 0)  {
-      console.log('first section');
+      //console.log('first section');
       id = 0;
       updateValues(id);
 

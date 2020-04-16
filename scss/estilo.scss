@@ -547,7 +547,8 @@ section.sobre {
         text-align: left;
 
         @media screen and (max-width: 768px) {
-            font-size: 20px !important;
+            font-size: 17px !important;
+            margin: 5px;
         }
     }
 
@@ -592,7 +593,7 @@ section.creditos {
         text-align: center;
 
         @media screen and (max-width: 768px) {
-            font-size: 18px !important;
+            font-size: 15px !important;
         }
 
         a {
