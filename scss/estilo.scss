@@ -27,6 +27,10 @@ p {
 
 h3 {
     font-size: 24px;
+
+    @media screen and (max-width: 650px) {
+        font-size: 18px;
+    }
 }
 
 svg {
@@ -475,6 +479,11 @@ section.galeria {
             color: $primario;
             cursor: pointer;
         }
+
+        @media screen and (max-width: 650px) {
+            font-size: 20px;
+            padding: 20px;
+        }
     }
 
     .modal-content {
@@ -489,6 +498,10 @@ section.galeria {
 
         text-align: center;
         font-family: inter;
+
+        @media screen and (max-width: 650px) {
+            height: 60vh;
+        }
 
         img {
             padding: 0;
