@@ -4,11 +4,7 @@ Especial web: curaduría digital de obras sobre memoria y conflicto armado de Be
 
 ### TODO:
 
-- [ ] Escribir texto sobre el proyecto
-
-
-
-
+- [x] Escribir texto sobre el proyecto
 - [x] Agregar Galeria de imagenes de las obras
 - [x] Ajustar estilos para móvil.
 - [x] Páginas para todas las obras.
