@@ -267,7 +267,8 @@ section.galeria {
       text-decoration: none;
       width: 33%;
       padding: 10px;
-      margin-top: 10px; }
+      margin-top: 10px;
+      margin-bottom: 30px; }
       section.galeria .imagenes a.clicked img {
         border: #DB2A6B 2px solid; }
       @media screen and (max-width: 850px) {
@@ -286,7 +287,6 @@ section.galeria {
         font-weight: light;
         color: #24212D;
         line-height: 1.5;
-        margin-bottom: 30px;
         hyphens: auto; }
         section.galeria .imagenes a p span {
           color: #DB2A6B; }
@@ -297,7 +297,6 @@ section.galeria {
   display: none; }
   .modal .modal-background {
     background-color: #ffffff;
-    opacity: 90%;
     position: fixed;
     top: 0;
     left: 0;
@@ -322,7 +321,9 @@ section.galeria {
     width: 80vw;
     max-width: 1500px;
     transform: translate(-50%, -50%);
-    padding-bottom: 20px; }
+    padding-bottom: 20px;
+    text-align: center;
+    font-family: inter; }
     .modal .modal-content img {
       padding: 0;
       display: block;

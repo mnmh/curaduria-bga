@@ -405,6 +405,7 @@ section.galeria {
             width: 33%;
             padding: 10px;
             margin-top: 10px;
+            margin-bottom: 30px;
 
             &.clicked {
                 img { 
@@ -433,7 +434,6 @@ section.galeria {
                 font-weight: light;
                 color: $secundario;
                 line-height: 1.5; 
-                margin-bottom: 30px;
                 hyphens: auto;
 
                 span {
@@ -455,7 +455,6 @@ section.galeria {
 
     .modal-background {
         background-color: $fondo;
-        opacity: 90%;
         position: fixed;
         top: 0;
         left: 0;
@@ -487,6 +486,9 @@ section.galeria {
         max-width: 1500px;
         transform: translate(-50%, -50%);
         padding-bottom: 20px;
+
+        text-align: center;
+        font-family: inter;
 
         img {
             padding: 0;
