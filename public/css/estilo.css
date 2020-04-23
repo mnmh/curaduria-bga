@@ -189,12 +189,14 @@ h1 {
 section.container {
   width: 100vw;
   margin-bottom: 5vh; }
+  section.container .dibujo svg {
+    max-height: 60vh; }
   section.container p {
     font-family: inter, sans-serif;
     font-weight: light;
     color: #24212D;
     line-height: 1.8;
-    width: 1000px;
+    width: 1100px;
     margin: 5vh auto 0 auto;
     text-align: center;
     max-width: 95%; }
@@ -202,7 +204,7 @@ section.container {
     section.container {
       margin-bottom: 0; } }
   section.container .player {
-    margin: 40px; }
+    margin: 30px; }
     @media screen and (max-width: 600px) {
       section.container .player {
         margin: 30px 20px 20px 20px; } }
@@ -242,22 +244,22 @@ section.container {
         background-image: url("../svg/prev.svg");
         background-repeat: no-repeat;
         margin: 10px;
-        padding: 20px; }
+        padding: 15px; }
       section.container .player .botones #boton-siguiente {
         background-image: url("../svg/next.svg");
         background-repeat: no-repeat;
         margin: 10px;
-        padding: 20px; }
+        padding: 15px; }
       section.container .player .botones #boton-audio {
         background-image: url("../svg/play.svg");
         background-repeat: no-repeat;
-        padding: 12px;
+        padding: 10px;
         margin: 7px 25px 0 30px; }
       section.container .player .botones #boton-audio.playing {
         background-image: url("../svg/pause.svg");
         background-repeat: no-repeat;
-        padding: 12px;
-        margin: 9px 25px 0 30px; }
+        padding: 10px;
+        margin: 10px 25px 0 30px; }
       @media screen and (max-width: 600px) {
         section.container .player .botones #boton-anterior, section.container .player .botones #boton-siguiente {
           padding: 14px; }
@@ -265,7 +267,7 @@ section.container {
           padding: 8px; } }
 
 section.contexto {
-  width: 1000px;
+  width: 1100px;
   margin: 15vh auto 15vh auto;
   text-align: center;
   max-width: 90%; }
@@ -345,30 +347,39 @@ section.galeria {
         padding: 20px; } }
   .modal .modal-content {
     position: fixed;
+    width: 100%;
+    height: 100%;
+    margin: 40px auto 40px auto;
     top: 50%;
     left: 50%;
-    height: 80vh;
-    width: 80vw;
-    max-width: 1500px;
     transform: translate(-50%, -50%);
-    padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    font-family: inter; }
-    @media screen and (max-width: 650px) {
-      .modal .modal-content {
-        height: 60vh; } }
+    font-family: inter;
+    line-height: 1.5;
+    hyphens: auto; }
     .modal .modal-content img {
-      padding: 0;
-      display: block;
-      margin: auto;
-      width: 100%;
-      height: 100%;
+      max-height: 70vh;
+      max-width: 80vw;
       object-fit: contain; }
+      @media screen and (max-width: 650px) {
+        .modal .modal-content img {
+          max-height: 60vh; } }
+    .modal .modal-content p {
+      max-width: calc(100% - 20px); }
+      .modal .modal-content p.info {
+        margin-top: 0; }
 
 section.sobre {
   margin: 10vh auto;
-  width: 1000px;
-  max-width: 95%; }
+  width: 1100px;
+  max-width: calc(100% - 40px); }
+  @media screen and (max-width: 768px) {
+    section.sobre {
+      margin: 5vh auto; } }
   section.sobre span {
     color: #DB2A6B; }
   section.sobre p {
@@ -383,7 +394,7 @@ section.sobre {
         margin: 5px; } }
     @media screen and (max-width: 600px) {
       section.sobre p {
-        font-size: 18px !important;
+        font-size: 14px !important;
         margin: 5px; } }
   section.sobre .center {
     text-align: center;
@@ -399,15 +410,15 @@ section.creditos {
   font-family: inter, sans-serif;
   margin: 0 auto 10vh auto;
   width: 900px;
-  max-width: 95%; }
+  max-width: calc(100% - 40px); }
   section.creditos h3 {
     font-size: 24px;
     text-align: center;
-    margin: 0 auto 5vh auto;
-    text-decoration: underline; }
+    margin: 0 auto 5vh auto; }
     @media screen and (max-width: 768px) {
       section.creditos h3 {
-        font-size: 20px !important; } }
+        font-size: 18px !important;
+        margin: 0 auto 3vh auto; } }
   section.creditos p {
     font-weight: light;
     line-height: 2.2;
@@ -415,7 +426,7 @@ section.creditos {
     text-align: center; }
     @media screen and (max-width: 768px) {
       section.creditos p {
-        font-size: 15px !important; } }
+        font-size: 12px !important; } }
     section.creditos p a {
       color: #24212D;
       text-decoration: underline; }
