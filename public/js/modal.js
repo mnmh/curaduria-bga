@@ -12,7 +12,7 @@
         return false;
     })
 
-    $('.modal-close, .modal-background').on('click', function() {
+    $('.modal-close, .modal-background, .modal-content').on('click', function() {
         
         $('.modal').fadeOut(300);
 
