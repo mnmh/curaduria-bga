@@ -88,19 +88,19 @@ h1 {
       animation: retrato 4s linear normal; }
     .hero svg path.ensayo {
       stroke-dasharray: 9461;
-      animation: ensayo 5s linear normal; }
+      animation: ensayo 4s linear normal; }
     .hero svg path.auras {
       stroke-dasharray: 5170;
-      animation: auras 5s linear normal; }
+      animation: auras 4s linear normal; }
     .hero svg path.delicias {
       stroke-dasharray: 9083;
-      animation: delicias 5s linear normal; }
+      animation: delicias 4s linear normal; }
     .hero svg path.presidente {
       stroke-dasharray: 8790;
-      animation: presidente 5s linear normal; }
+      animation: presidente 4s linear normal; }
     .hero svg path.tumulo {
       stroke-dasharray: 9835;
-      animation: tumulo 5s linear normal; }
+      animation: tumulo 4s linear normal; }
   @media screen and (max-width: 600px) {
     .hero {
       height: 90vh; } }

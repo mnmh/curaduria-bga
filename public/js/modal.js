@@ -37,4 +37,13 @@
         }
     });
 
+    if ( $(window).scrollTop() === 0 ) {
+        $('html').css('overflow', 'hidden');
+        //console.log('disable scroll');
+    }
+
+    setTimeout(function() {
+        $('html').css('overflow', 'auto');
+    }, 4000);
+
 })(jQuery, this);
