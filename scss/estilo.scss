@@ -307,6 +307,19 @@ section.container {
         max-width: 95%;
     }
 
+    a {
+        color:$primario;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+
+        &:visited {
+            color:$primario;
+        }
+    }
+
     @media screen and (max-width: 768px) {
         //height: 80vh;
         margin-bottom: 0;

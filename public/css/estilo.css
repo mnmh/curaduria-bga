@@ -200,6 +200,13 @@ section.container {
     margin: 5vh auto 0 auto;
     text-align: center;
     max-width: 95%; }
+  section.container a {
+    color: #DB2A6B;
+    text-decoration: none; }
+    section.container a:hover {
+      text-decoration: underline; }
+    section.container a:visited {
+      color: #DB2A6B; }
   @media screen and (max-width: 768px) {
     section.container {
       margin-bottom: 0; } }
