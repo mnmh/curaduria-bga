@@ -97,18 +97,13 @@ nav {
 
     .titulos, svg {
         position: absolute;
-        mix-blend-mode: difference;
-
-        &:hover {
-            mix-blend-mode: color;
-        }
     }
 
-    .titulos
 
     h1 {
         font-size: 14vw;
         margin: 10px;
+        opacity: 0.9;
     }
 
     h2 {
