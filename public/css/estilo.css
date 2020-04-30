@@ -286,7 +286,7 @@ section.contexto {
 
 section.galeria {
   width: 1020px;
-  margin: 15vh auto 15vh auto;
+  margin: 15vh auto 40px auto;
   max-width: 90%; }
   section.galeria h3 {
     text-decoration: underline;
@@ -414,7 +414,6 @@ section.sobre {
 section.creditos {
   font-family: inter, sans-serif;
   margin: 0 auto 10vh auto;
-  width: 900px;
   max-width: calc(100% - 40px); }
   section.creditos h3 {
     font-size: 24px;
@@ -423,7 +422,8 @@ section.creditos {
     @media screen and (max-width: 768px) {
       section.creditos h3 {
         font-size: 18px !important;
-        margin: 0 auto 3vh auto; } }
+        margin: 0 auto 3vh auto;
+        text-align: left; } }
   section.creditos p {
     font-weight: light;
     line-height: 2.2;
@@ -431,12 +431,35 @@ section.creditos {
     text-align: center; }
     @media screen and (max-width: 768px) {
       section.creditos p {
-        font-size: 12px !important; } }
+        font-size: 12px !important;
+        text-align: left; } }
     section.creditos p a {
       color: #24212D;
       text-decoration: underline; }
   section.creditos span {
     color: #DB2A6B; }
+  section.creditos .git {
+    font-size: 14px; }
+
+.navegar-obras {
+  font-size: 22px;
+  display: flex;
+  justify-content: space-between;
+  padding: 40px;
+  max-width: 1100px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 5vh; }
+  .navegar-obras a {
+    color: #DB2A6B;
+    font-size: 26px; }
+    @media screen and (max-width: 650px) {
+      .navegar-obras a {
+        font-size: 18px; } }
+  @media screen and (max-width: 768px) {
+    .navegar-obras {
+      padding: 20px;
+      font-size: 20px; } }
 
 @font-face {
   font-family: 'Grotesk';

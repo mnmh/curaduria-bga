@@ -438,7 +438,7 @@ section.contexto {
 
 section.galeria {
     width: 1020px;
-    margin: 15vh auto 15vh auto;
+    margin: 15vh auto 40px auto;
     max-width: 90%;
     
 
@@ -626,7 +626,7 @@ section.sobre {
 section.creditos {
     font-family: inter, sans-serif;
     margin: 0 auto 10vh auto;
-    width: 900px;
+    //width: 900px;
     max-width: calc(100% - 40px);
     
 
@@ -639,6 +639,7 @@ section.creditos {
         @media screen and (max-width: 768px) {
             font-size: 18px !important;
             margin: 0 auto 3vh auto;
+            text-align: left;
         }
     }
 
@@ -650,6 +651,7 @@ section.creditos {
 
         @media screen and (max-width: 768px) {
             font-size: 12px !important;
+            text-align: left;
         }
 
         a {
@@ -660,6 +662,38 @@ section.creditos {
 
     span {
         color: $primario;
+    }
+
+    .git {
+        font-size: 14px;
+    }
+}
+
+
+
+.navegar-obras {
+    font-size: 22px;
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+    max-width: 1100px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 5vh;
+    
+
+    a {
+        color: $primario;
+        font-size: 26px;
+
+        @media screen and (max-width: 650px) {
+            font-size: 18px;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        padding: 20px;
+        font-size: 20px;
     }
 }
 
