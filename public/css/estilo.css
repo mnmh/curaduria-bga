@@ -461,6 +461,9 @@ section.creditos {
       padding: 20px;
       font-size: 20px; } }
 
+.top-pos {
+  object-position: top; }
+
 @font-face {
   font-family: 'Grotesk';
   src: url("../fonts/Grotesk-Medium.woff2") format("woff2"), url("../fonts/Grotesk-Medium.woff") format("woff");
