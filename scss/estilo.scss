@@ -2,14 +2,15 @@ $primario: #DB2A6B;
 $secundario: #24212D;
 $fondo: #ffffff;
 
-
+$fuente-tiulos: Grotesk;
+$fuente-textos: inter;
 
 * {
     box-sizing: border-box;
 }
 
 body {
-    font-family: Grotesk, sans-serif;
+    font-family: $fuente-tiulos, sans-serif;
     //margin: 0;
     width: 100% !important;
     margin: 0 !important;
@@ -294,7 +295,7 @@ section.container {
     }
 
     p {
-        font-family: inter, sans-serif;
+        font-family: $fuente-textos, sans-serif;
         font-weight: light;
         color: $secundario;
         line-height: 1.8;
@@ -430,7 +431,7 @@ section.contexto {
     }
 
     p {
-        font-family: inter, sans-serif;
+        font-family: $fuente-textos, sans-serif;
         font-weight: light;
         color: $secundario;
         line-height: 2;
@@ -485,7 +486,7 @@ section.galeria {
             }
 
             p {
-                font-family: inter, sans-serif;
+                font-family: $fuente-textos, sans-serif;
                 font-weight: light;
                 color: $secundario;
                 line-height: 1.5; 
@@ -552,7 +553,7 @@ section.galeria {
         justify-content: center;
 
         text-align: center;
-        font-family: inter;
+        font-family: $fuente-textos;
         line-height: 1.5;
         hyphens: auto;
 
@@ -591,7 +592,7 @@ section.sobre {
     }
 
     p {
-        font-family: inter, sans-serif;
+        font-family: $fuente-textos, sans-serif;
         font-weight: light;
         font-size: 24px;
         line-height: 2;
@@ -626,7 +627,7 @@ section.sobre {
 }
 
 section.creditos {
-    font-family: inter, sans-serif;
+    font-family: $fuente-textos, sans-serif;
     margin: 0 auto 10vh auto;
     //width: 900px;
     max-width: calc(100% - 40px);
