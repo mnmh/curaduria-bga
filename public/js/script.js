@@ -1,25 +1,31 @@
 (function ($, root, undefined) {
 
-  var audio = document.getElementById("audio");
-  var $botPlay = $("#boton-audio");
-  var $botNext = $("#boton-siguiente");
-  var $botPrev = $("#boton-anterior");
-  var totalSections = $( ".dibujo" ).length;
-  var id = 0;
-  var $section;
+  var audio = document.getElementById("audio"); //toma el elemento de audio
+  var $botPlay = $("#boton-audio"); //botón de play del reproductor
+  var $botNext = $("#boton-siguiente"); //botón de siguiente
+  var $botPrev = $("#boton-anterior"); //botón de anterior
+
+  var totalSections = $( ".dibujo" ).length; //lee el número de secciones
+  var id = 0; //empieza en la sección 0
+
+  var $section; 
   var $path;
-  var audioFrom;
-  var audioTo;
+  var audioFrom; //segundo donde empieza el audio
+  var audioTo; //segundo donde termina el audio
+
   var drawPath; //Animacion del path
+  
   var primeraVez = true;
   
+
   updateValues(id);
   $botPlay.click(playPauseAudio); //pausar reproducir audio
   $botNext.click(playNext); //pasar a siguiente pista
   $botPrev.click(playPrev); //pasar a siguiente pista
 
 
-  //funcion para actualizar variables
+  //funcion para actualizar variables 
+  //de la sección corespondiente
   function updateValues(i) {
 
     //Actualizar variables
@@ -42,20 +48,20 @@
     });
   
     $section.show(); //mostrar seccion actual
-    
   }
 
   $(window).scroll(function() {
+    //revisar si el usuario ha interactuado con la página
     if (primeraVez) {
-      var promise = audio.play(); //revisar si el usuario ha interactuado con la página
+      var promise = audio.play(); 
 
       var top = $section.offset().top,
           height = $section.outerHeight(),
           wHeight = $(window).height(),
           wScroll= $(this).scrollTop();
 
-      if (wScroll > (top+height-wHeight)){
-          //console.log('scroll en seccion');
+        //si el usuario esta dentro del div de reproducción:
+      if (wScroll > (top+height-wHeight)){ 
 
           // revisa si puede hacer autoplay en al página
           if (promise !== undefined) {
@@ -66,19 +72,20 @@
 
             }).catch(error => {
 
-              //console.log('autoplay was prevented');
+              //no se puede reproducir el audio
               
             });
           }
           
+          //solo realizar esta función la primera vez que se hace scroll
           primeraVez = false;
       }
     }
  });
 
   //funcion para cambiar a la siguiente seccion
+
   function playNext(){
-    //console.log('PlayNext');
     
     //esconder la seccion anterior
     $section.hide();
@@ -100,7 +107,6 @@
 
   //funcion para cambiar a la seccion anterior
   function playPrev(){
-    //console.log('PlayPrev');
 
     //esconder la seccion anterior
     $section.hide();
@@ -108,7 +114,6 @@
     id--;
 
     if (id < 0)  {
-      //console.log('first section');
       id = 0;
       updateValues(id);
 
@@ -139,10 +144,8 @@
 
   //función para reproducir la pista de audio
   function playAudio() {
-    //console.log('audio play');
     $botPlay.removeClass('playing').removeClass('paused');
     $botPlay.addClass('playing');
-
     audio.play();
     drawPath.play();
 
@@ -155,8 +158,7 @@
 
   //función para pausar la pista de audio
   function pauseAudio() {
-    //console.log('audio pause');
-    $botPlay.removeClass('playing').removeClass('paused');
+      $botPlay.removeClass('playing').removeClass('paused');
       $botPlay.addClass('paused');
       audio.pause();
       drawPath.pause();
@@ -167,7 +169,6 @@
     var porcentaje = ( current * 100 ) / total;
     $( '.slider .current' ).attr( 'style', 'width: '+porcentaje+'%' ); 
   };
-
 
 })(jQuery, this);
 

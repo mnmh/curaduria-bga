@@ -54,6 +54,7 @@ h3 {
     }
 }
 
+//menu de navegación de la parte superior de la pantalla
 nav {
     font-size: 24px;
     display: flex;
@@ -77,7 +78,7 @@ nav {
 
 }
 
-
+//hero inicial en home y páginas de obra
 .hero {
     height: 90vh;
     width: 100%;
@@ -117,6 +118,7 @@ nav {
         }
     }
 
+    //animaciones para cada ilustración inicial
     svg {
         height: 100%;
         width: 100%;
@@ -166,6 +168,7 @@ nav {
       }
 }
 
+//menu de obras de la págian principal
 .menu {
     max-width: 1600px;
     margin: 15vh auto;
@@ -212,38 +215,40 @@ nav {
             }
         }
 
+        //animaciones de ilustraciones del menu (se activan con hover)
         &:hover {
             .delicias {
-                stroke-dasharray: 4550;
+                stroke-dasharray: 4550; //longitud del path
                 animation: delicias 8s linear alternate-reverse infinite;
             }
 
             .presidente {
-                stroke-dasharray: 4395;
+                stroke-dasharray: 4395; //longitud del path
                 animation: presidente 8s linear alternate-reverse infinite;
             }
 
             .auras {
-                stroke-dasharray: 2585;
+                stroke-dasharray: 2585; //longitud del path
                 animation: auras 8s linear alternate-reverse infinite;
             }
 
             .tumulo {
-                stroke-dasharray: 4918;
+                stroke-dasharray: 4918; //longitud del path
                 animation: tumulo 8s linear alternate-reverse infinite;
             }
 
             .ensayo {
-                stroke-dasharray: 4731;
+                stroke-dasharray: 4731; //longitud del path
                 animation: ensayo 8s linear alternate-reverse infinite;
             }
         }
     }
 }
 
+//keyframes de animaciones en los hero
 @keyframes delicias {
     from {
-        stroke-dashoffset: 9100;
+        stroke-dashoffset: 9100; //doble de longitud del path
       }
     to {
         stroke-dashoffset: 0;
@@ -252,7 +257,7 @@ nav {
 
 @keyframes presidente {
     from {
-        stroke-dashoffset: 8776;
+        stroke-dashoffset: 8776; //doble de longitud del path
       }
     to {
         stroke-dashoffset: 0;
@@ -261,7 +266,7 @@ nav {
 
 @keyframes auras {
     from {
-        stroke-dashoffset: 5200;
+        stroke-dashoffset: 5200; //doble de longitud del path
       }
     to {
         stroke-dashoffset: 0;
@@ -270,7 +275,7 @@ nav {
 
 @keyframes tumulo {
     from {
-        stroke-dashoffset: 8400;
+        stroke-dashoffset: 8400; //doble de longitud del path
       }
     to {
         stroke-dashoffset: 0;
@@ -279,13 +284,14 @@ nav {
 
 @keyframes ensayo {
     from {
-        stroke-dashoffset: 9500;
+        stroke-dashoffset: 9500; //doble de longitud del path
       }
     to {
         stroke-dashoffset: 0;
       }
 }
 
+//estilos para las secciones de dibujo en las páginas de obra
 section.container {
     width: 100vw;
     margin-bottom: 5vh;
@@ -319,10 +325,10 @@ section.container {
     }
 
     @media screen and (max-width: 768px) {
-        //height: 80vh;
         margin-bottom: 0;
     }
     
+    //estilos del reproductor de audio
     .player {
         margin: 30px;
 
@@ -419,6 +425,7 @@ section.container {
     }
 }
 
+//sección de contexto histórico
 section.contexto {
     width: 1100px;
     margin: 15vh auto 15vh auto;
@@ -438,7 +445,7 @@ section.contexto {
     }
 }
 
-
+//sección galeria de imagenes
 section.galeria {
     width: 1020px;
     margin: 15vh auto 40px auto;
@@ -506,6 +513,7 @@ section.galeria {
     }
 }
 
+//estilos para el modal o zoom de las imágenes de galería
 .modal {
     display: none;
 
@@ -577,7 +585,7 @@ section.galeria {
     }
 }
 
-
+//página 'sobre el proyecto'
 section.sobre {
     margin: 10vh auto;
     width: 1100px;
@@ -626,6 +634,7 @@ section.sobre {
     }
 }
 
+//créditos del proyecto
 section.creditos {
     font-family: $fuente-textos, sans-serif;
     margin: 0 auto 10vh auto;
@@ -673,7 +682,7 @@ section.creditos {
 }
 
 
-
+//botones para navegar entre obras en la parte inferior de la pantalla
 .navegar-obras {
     font-size: 22px;
     display: flex;
@@ -706,6 +715,7 @@ section.creditos {
 
     
 
+//fuentes y tipografias
 
 @font-face {
 font-family: 'Grotesk';
